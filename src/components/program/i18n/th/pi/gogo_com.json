@@ -1,0 +1,10 @@
+{
+  "PI_GOGO_KEY": "ค่า Key",
+  "PI_GOGO_KEY_TOOLTIP": "Reports value of specific key.",
+  "PI_GOGO_EQUAL_TO": "ตรงกับ",
+  "PI_GOGO_NUM_VAL_OF_KEY": "ค่าตัวเลขของ Key",
+  "PI_GOGO_NUM_OF_KEY_TOOLTIP": "Reports the number value of a specific key.",
+  "PI_GOGO_SUBMIT_TEXT": "ส่งข้อความ",
+  "PI_GOGO_SUBMIT_NUMBER": "ส่งค่า",
+  "PI_GOGO_TO_TOPIC": "ไปยังหัวข้อ"
+}

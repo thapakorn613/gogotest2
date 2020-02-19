@@ -1,0 +1,25 @@
+{
+    "MOTOR_TALK_TO": "สั่งงานมอเตอร์",
+    "MOTOR_TALK_TO_TOOLTIP": "Selects specific motor(s) to control.",
+    "MOTOR_TURN": "ให้",
+    "MOTOR_ON": "เปิด",
+    "MOTOR_OFF": "ปิด",
+    "MOTOR_ONOFF_TOOLTIP": "Turns on/off selected motor(s).",
+
+    "MOTOR_TURN_ON_FOR": "เปิดเป็นเวลา",
+    "MOTOR_TURN_ON_FOR_TOOLTIP": "tTurns on selected motor(s) for specified period of time.",
+    "MOTOR_TURN_CW": "หมุนตามเข็ม",
+    "MOTOR_TURN_CCW": "หมุนทวนเข็ม",
+    "MOTOR_RD": "กลับทิศ",
+    "MOTOR_RD_TOOLTIP": "Reverses direction of selected motor(s).",
+    "MOTOR_SET_POWER": "ตั้งค่าพลังงาน",
+    "MOTOR_SET_POWER_TOOLTIP": "Sets power level of selected motor(s). Values from 0-100.",
+
+    "MOTOR": "มอเตอร์",
+    "MOTOR_IS_ON": "กำลังทำงานอยู่?",
+    "MOTOR_IS_ON_TOOLTIP": "Returns True if the selected motors are on",
+
+    "MOTOR_IS_CW": "กำลังหมุนตามเข็ม?",
+    "MOTOR_IS_CW_TOOLTIP": "Returns True if the selected motors direction are clock-wise"
+
+}

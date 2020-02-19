@@ -1,0 +1,5 @@
+{
+    "IR_GET_IR": "ค่าอินฟราเรด",
+    "IR_NEW_IR": "มีอินฟราเรดใหม่?",
+    "IR_NEW_IR_TOOLTIP": "Reports whether infrared value has been received."
+}

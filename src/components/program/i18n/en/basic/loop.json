@@ -1,0 +1,13 @@
+{
+    "LOOP_FOREVER": "forever",
+    "LOOP_FOREVER_TOOLTIP": "Indefinitely executes block.",
+    "LOOP_EACH_TIME_WAIT": "each time wait",
+    "LOOP_REPEAT": "repeat",
+    "LOOP_REPEAT_TOOLTIP": "Repeats block for specific number of times.",
+    "LOOP_TIMES": "time(s)",
+    "LOOP_WAIT_UNTIL": "wait until",
+    "LOOP_WAIT_UNTIL_TOOLTIP": "Repeatedly executes block until it evaluates to true.",
+    "LOOP_STOP_PROCEDURE": "stop this procedure",
+    "LOOP_STOP_PROCEDURE_TOOLTIP": "quit the current procedure."
+
+}

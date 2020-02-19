@@ -1,0 +1,10 @@
+{
+  "PI_CAMERA_USE": "ใช้งานกล้อง",
+  "PI_CAMERA_CLOSE": "ปิดกล้อง",
+  "PI_CAMERA_START_FIND_FACE": "เริ่มค้นหาใบหน้า",
+  "PI_CAMERA_STOP_FIND_FACE": "หยุดการค้นหาใบหน้า",
+  "PI_CAMERA_TAKE_SNAPSHOT": "ถ่ายรูป",
+  "PI_CAMERA_FOUND_FACE": "เจอใบหน้า?",
+  "PI_CAMERA_IS_ON": "กล้องเปิดอยู่?",
+  "PI_CAMERA_FIND_FACE_IS_ON": "กำลังค้นหาใบหน้าอยู่?"
+}

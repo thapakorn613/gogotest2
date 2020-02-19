@@ -1,0 +1,19 @@
+{
+    "TIME_WAIT": "wait",
+    "TIME_WAIT_TOOLTIP": "Waits for specified time period.",
+    "TIME_GET_TIMER": "get timer",
+    "TIME_GET_TIMER_TOOLTIP": "Returns value of free-running timer.",
+    "TIME_RESET_TIMER": "reset timer",
+    "TIME_RESET_TIMER_TOOLTIP": "Resets free-running timer to zero.",
+    "TIME_TICK_EVERY": "Tick every",
+    "TIME_SET_TICK_TOOLTIP": "Sets the time beween each Tick",
+    "TIME_TICK_COUNT": "Tick count",
+    "TIME_TICK_COUNT_TOOLTIP": "Reports the number Ticks has passed since the last reset",
+    "TIME_TICKED": "Ticked?",
+    "TIME_TICKED_TOOLTIP": "Returns true if the clock has ticked",
+    "TIME_CLEAR_TICK": "clear Tick",
+    "TIME_CLEAR_TICK_TOOLTIP": "Resets the tick counter and reset the tick clock",
+    "TIME_IF_TICKED": "if Ticked",
+    "TIME_IF_TICKED_TOOLTIP": "executes if the clock has ticked"
+
+}

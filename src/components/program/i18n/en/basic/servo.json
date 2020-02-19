@@ -1,0 +1,6 @@
+{
+    "SERVO": "servo",
+    "SERVO_SET_HEADING": "Set servo heading",
+    "SERVO_LEFT_TURN": "Servo left turn",
+    "SERVO_RIGHT_TURN": "Servo right turn"
+}

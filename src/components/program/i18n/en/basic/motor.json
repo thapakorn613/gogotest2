@@ -1,0 +1,24 @@
+{
+    "MOTOR_TALK_TO": "talk to motor",
+    "MOTOR_TALK_TO_TOOLTIP": "Selects specific motor(s) to control.",
+    "MOTOR_TURN": "turn",
+    "MOTOR_ON": "on",
+    "MOTOR_OFF": "off",
+    "MOTOR_ONOFF_TOOLTIP": "Turns on/off selected motor(s).",
+    "MOTOR_TURN_ON_FOR": "turn on for",
+    "MOTOR_TURN_ON_FOR_TOOLTIP": "tTurns on selected motor(s) for specified period of time.",
+
+    "MOTOR_TURN_CW": "turn Clockwise",
+    "MOTOR_TURN_CCW": "turn Counter-Clockwise",
+    "MOTOR_RD": "reverse direction",
+    "MOTOR_RD_TOOLTIP": "Reverses direction of selected motor(s).",
+    "MOTOR_SET_POWER": "Set power",
+    "MOTOR_SET_POWER_TOOLTIP": "Sets power level of selected motor(s). Values from 0-100.",
+
+    "MOTOR": "motor",
+    "MOTOR_IS_ON": "is(are) on?",
+    "MOTOR_IS_ON_TOOLTIP": "Returns True if the selected motors are on",
+
+    "MOTOR_IS_CW": "direction is(are) CW?",
+    "MOTOR_IS_CW_TOOLTIP": "Returns True if the selected motors direction are clock-wise"
+}

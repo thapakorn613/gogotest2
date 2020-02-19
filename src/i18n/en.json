@@ -1,0 +1,560 @@
+{
+  "auth": {
+    "agree": "I agree to",
+    "alreadyJoined": "Already joined?",
+    "createAccount": "Create account",
+    "createNewAccount": "Create account",
+    "email": "Email",
+    "login": "Login",
+    "password": "Password",
+    "signUp": "Sign Up",
+    "termsOfUse": "Terms of Use.",
+    "welcome": "Welcome!"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "buttons": {
+    "advanced": "Icons, Groups, Dropdowns",
+    "button": "BUTTON",
+    "colors": "Colors",
+    "disabled": "DISABLED",
+    "dropdown": "DROPDOWN",
+    "hover": "HOVER",
+    "main": "Primary & Secondary Buttons",
+    "micro": "MICRO",
+    "pressed": "PRESSED",
+    "small": "SMALL"
+  },
+  "charts": {
+    "horizontalBarChart": "Horizontal Bar Chart",
+    "verticalBarChart": "Vertical Bar Chart",
+    "lineChart": "Line Chart",
+    "pieChart": "Pie Chart",
+    "donutChart": "Donut Chart",
+    "bubbleChart": "Bubble Chart"
+  },
+  "dashboard": {
+    "dataVisualization": "Data Visualization",
+    "success": "SUCCESS",
+    "successMessage": "You successfully read this important alert message.",
+    "elements": "Elements",
+    "features": "Features",
+    "setupProfile": "Setup Profile",
+    "teamMembers": "Team Members",
+    "usersAndMembers": "Users & Members",
+    "versions": "Versions"
+  },
+  "global": {
+    "warning_confirm": {
+      "title": "Are you sure?",
+      "message": "You won't be able to revert this!",
+      "yes": "Yes",
+      "cancel": "Cancel"
+    },
+    "saving": {
+      "title": "Saving"
+    },
+    "loading": {
+      "title": "Loading"
+    }
+  },
+  "plugin": {
+    "noplugin_header": "No plugin detected",
+    "long_desc": "It seems like GoGo Plugin was not installed",
+    "long_desc_2nd": "or the plugin is not running.",
+    "download": "Download plugin",
+    "installed_and_runing": "Plugin was installed and it is running"
+  },
+  "gogoboard": {
+    "headers":{
+      "is_connected": "Board is connected",
+      "is_not_connected": "Board is not connected",
+      "ping": "Is your board works?",
+      "motors": "Output (Motors)",
+      "sensors": "Input (Sensors)",
+      "labs": "Remote Lab"
+    },
+    "firmware_version_is": "Firmware version is",
+    "ping_panel": {
+      "beep": "Beep",
+      "show_button": "Show",
+      "show_placeholder": "Text or Number to show",
+      "ir_received_code": "IR Received Code"
+    },
+    "lab_panel": {
+      "lab1": "Lab 1 : Car control",
+      "lab2": "Lab 2 : Smart farm",
+      "lab3": "Lab 3 : Maze runner"
+    },
+    "motor": {
+      "slect_motor_port": "Select Motor Port(s)",
+      "click_to_select": "Click to select port",
+      "click_to_unselect": "Click to unselect port",
+
+      "on": "Turn on",
+      "off": "Turn off",
+      "ccw": "Turn counter-clockwise",
+      "rd": "Reverse direction",
+      "cw": "Turn clockwise",
+
+      "motor_power": "Motor Power",
+      "set_power": "Set Power"
+      
+    },
+    "servo": {
+      "servo_head": "Servo Head",
+      "set_head": "Set Head",
+      "set_duty": "Set Servo Duty"
+    },
+    "sensor": {
+      "label": "Sensor"
+    },
+    "tabs": {
+      "dc_motor" : "DC Motor",
+      "servo_motor": "Servo Motor"
+    }
+  },
+  "raspberry": {
+    "headers" : {
+      "raspberry_pi": "Raspberry Pi",
+      "is_connected": "is connected",
+      "is_not_connected": "isn't connected",
+      "info": "Raspberry Pi Info",
+      "keyvalue": "Latest Message (Key-Value)",
+      "network": "Network Configuration",
+      "homescreen": "GoGo Home Screen",
+      "camera": "Camera"
+    },
+    "messages": {
+      "pi_is_on": "Raspberry Pi is on",
+      "pi_is_disconnected": "Raspberry Pi is disconnected"
+    },
+    "info": {
+      "shutdown": "Shutdown",
+      "reboot": "Reboot",
+      "revistion_is": "Raspberry Pi Revision is",
+      "cpu_load": "CPU Load",
+      "cpu_temp": "CPU Tempurature",
+      "mem_used": "Memory Used"
+    },
+    "key_value": {
+      "key": "Key",
+      "value": "Value"
+    },
+    "network" : {
+      "wlan_ip": "Wireless IP Address",
+      "lan_ip": "IP Address",
+      "ssid": "SSID",
+      "password": "Password",
+      "connect": "Connect",
+      "show_password": "Show Password"
+    },
+    "wifi_status": {
+      "0": "",
+      "1": "Connecting... (this can take a while)",
+      "2": "Success",
+      "3": "Authentication/Connection Error",
+      "4": "SSID Not Found",
+      "5": "Unknown Error"
+    },
+    "camera": {
+      "camera_is": "Camera is",
+      "use": "Use",
+      "close": "Close",
+      "preview": "Preview",
+      "start_find_face": "Start find face",
+      "stop_find_face": "Stop find face",
+      "take_snapshot": "Take Snapshot",
+      "disabled": "Disabled",
+      "searching": "Searching",
+      "on": "on",
+      "off": "off",
+      "found_face": "Found face"
+    }
+  },
+  "program": {
+    "menus": {
+      "menus": "Menus",
+
+      "new_project": "New Project",
+      "new_project_desc": "New Project",
+
+      "my_projects": "My Projects",
+      "my_projects_desc": "Show my projects, that saved on cloud",
+
+      "project_example": "Project Example",
+      "project_example_desc": "Show the examples",
+      
+
+      "save": "Save",
+      "save_desc": "Save current workspace to the cloud",
+
+      "save_as": "Save as a copy",
+      "save_as_desc": "Save project to the cloud as a new name",
+
+      "open": "Open from file",
+      "open_desc": "Load blocks from local file into the workspace",
+
+      "import": "Import from file",
+      "import_desc": "Load and import blocks into the workspace (except main procedure)",
+
+      "save_as_a_file": "Save as a file",
+      "save_as_a_file_desc": "Download blocks into a local file",
+
+      "share": "Share",
+      "share_desc": "Share this workspace"
+
+    },
+    "cloud": {
+    },
+    "messages": {
+      "please_login": "Please login before save to the cloud",
+      "unable_to_save": "Unable to Save",
+      "unable_to_load": "Unable to Load",
+      "saving": "Saving ...",
+      "saved_title": "Saved!",
+      "save_success": "Your project has been saved",
+      "updated_title": "Updated!",
+      "update_success": "Your project has been updated",
+      "opened_title": "Opened!",
+      "open_success": "Your project has been loaded into the workspace",
+      "shared_title": "Success!",
+      "share_success": "Share your workspace with this link",
+      "create_title": "Created!",
+      "create_text": "Your workspace has been created."
+    },
+    "footer": {
+      "undo": "Undo",
+      "redo": "Redo",
+      "cleanup": "Clean Up",
+      "run": "Simulatly press a \"run\" button on the board.",
+      "stop": "Stop running",
+      "download": "Write the program to Gogo Board.",
+      "download_short": "Download"
+    }
+  },
+  "project": {
+    "headers": {
+      "my_projects": "My Projects",
+      "new_project": "Project",
+      "edit_project": "Edit Project",
+      "delete_project": "Delete confirmation"
+
+    },
+    "form": {
+      "name": "Project Name",
+      "desc": "Project Description",
+      "search": "Seach by name or description"
+    },
+
+    "buttons": {
+      "open": "Open",
+      "edit": "Edit",
+      "delete": "Delete",
+
+      "save": "Save",
+      "cancel": "Cancel",
+
+      "confirm_delete": "Yes I'm sure"
+    },
+    "deletion": {
+      "delete_confirm_text": "Do you really want to delete",
+      "deleted_title": "Deleted!",
+      "delete_success_1": "Project ",
+      "delete_success_2": "has been deleted!",
+      "delete_fail": "Error "
+    },
+
+    "no_project": "No Project"
+  },
+  "pages": {
+    "about": {
+      "dropdown": "About",
+      "title": "About"
+    },
+    "language": {
+      "title": "Choose your language"
+    }
+  },
+  "user": {
+    "language": "Change Language",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "My Profile",
+    "give_feedback": "Give Feedback",
+    "about": "About",
+    "message": {
+      "logged_out_header": "Logged Out!",
+      "logged_out": "You have been logged out"
+    }
+  },
+  "notificationsPage": {
+    "alerts": {
+      "title": "Alerts",
+      "success": "SUCCESS",
+      "successMessage": "You successfully read this important alert message.",
+      "info": "INFO",
+      "infoMessage": "This alert needs your attention, but it's not super important.",
+      "warning": "WARNING",
+      "warningMessage": "Better check yourself, you're not looking too good.",
+      "danger": "DANGER",
+      "dangerMessage": "Change a few things up and try submitting again."
+    },
+    "popovers": {
+      "title": "Tooltips & Popovers",
+      "popoverTitleLabel": "Popover Title",
+      "popoverTextLabel": "Popover Text",
+      "popoverIconLabel": "Popover Icon (fontawesome)",
+      "showPopover": "Show Popover",
+      "topTooltip": "top tooltip",
+      "rightTooltip": "rightside tooltip",
+      "leftTooltip": "left",
+      "bottomTooltip": "below"
+    },
+    "toasts": {
+      "title": "Toasts",
+      "textLabel": "Text",
+      "durationLabel": "Duration (milliseconds)",
+      "iconLabel": "Icon (fontawesome)",
+      "fullWidthLabel": "Fullwidth",
+      "launchToast": "Launch toast"
+    }
+  },
+  "extra": {
+    "tabs": {
+      "title": "Tabs",
+      "maps": "Maps",
+      "overview": "Overview",
+      "setupProfile": "Setup Profile"
+    },
+    "chat": "Chat",
+    "profileCard": "Profile Card"
+  },
+  "forms": {
+    "controls": {
+      "female": "Female",
+      "male": "Male",
+      "title": "Checkboxes, Radios, Switches",
+      "radioDisabled": "Disabled Radio",
+      "radio": "Radio",
+      "subscribe": "Subscribe to newsletter"
+    },
+    "dateTimePicker": {
+      "title": "Date time pickers",
+      "basic": "Basic",
+      "time": "Time",
+      "range": "Range",
+      "multiple": "Multiple",
+      "disabled": "Disabled",
+      "customFirstDay": "Custom first day",
+      "customDateFormat": "Custom date format"
+    },
+    "inputs": {
+      "emailValidatedSuccess": "Email (validated with success)",
+      "emailValidated": "Email (validated)",
+      "inputWithIcon": "Input With Icon",
+      "inputWithButton": "Input With Button",
+      "inputWithClearButton": "Input With Clear Button",
+      "inputWithRoundButton": "Input With Round Button",
+      "textInput": "Text Input",
+      "textInputWithDescription": "Text Input (with description)",
+      "textArea": "Text Area",
+      "title": "Inputs",
+      "upload": "UPLOAD"
+    },
+    "mediumEditor": {
+      "title": "Medium Editor"
+    },
+    "selects": {
+      "country": "Country Select",
+      "countryMulti": "Country Multi Select",
+      "multi": "Multi Select",
+      "simple": "Simple Select",
+      "title": "Selects"
+    },
+    "wizard": {
+      "name": "Name",
+      "completed": "Wizard completed!",
+      "confirmSelection": "Confirm selection",
+      "rich": "Rich Wizard",
+      "simple": "Simple Wizard",
+      "stepOne": "Step 1. Name",
+      "stepTwo": "Step 2. Country",
+      "stepThree": "Step 3. Confirm",
+      "verticalRich": "Vertical Rich Wizard",
+      "verticalSimple": "Vertical Simple Wizard"
+    }
+  },
+  "grid": {
+    "desktop": "Desktop Grid",
+    "fixed": "Fixed Grid",
+    "offsets": "Offsets",
+    "responsive": "Responsive Grid"
+  },
+  "icons": {
+    "back": "Back to icons",
+    "none": "No icons found",
+    "search": "Icon search",
+    "title": "Icons"
+  },
+  "spinners": {
+    "title": "Spinners",
+    "poweredBy": "Powered by"
+  },
+  "language": {
+    "brazilian_portuguese": "Português",
+    "english": "English",
+    "spanish": "Spanish",
+    "thai": "ภาษาไทย"
+  },
+  "menu": {
+    "auth": "Auth",
+    "buttons": "Buttons",
+    "charts": "Charts",
+    "colorPickers": "Color Pickers",
+    "dashboard": "Dashboard",
+    "extra": "Extra",
+    "formElements": "Form Elements",
+    "forms": "Forms",
+    "formWizards": "Form Wizards",
+    "mediumEditor": "Medium Editor",
+    "grid": "Grid",
+    "icons": "Icons",
+    "cards": "Cards",
+    "spinners": "Spinners",
+    "login": "Login",
+    "maps": "Maps",
+    "modals": "Modals",
+    "notifications": "Notifications",
+    "progressBars": "Progress Bars",
+    "signUp": "Sign up",
+    "statistics": "Statistics",
+    "tables": "Tables",
+    "tags": "Tags",
+    "typography": "Typography",
+    "uiElements": "UI Elements",
+    "treeView": "Tree view",
+    "dateTimePickers": "Date time pickers",
+    "fileUpload": "File Upload"
+  },
+  "messages": {
+    "all": "See all messages",
+    "new": "New messages from {name}"
+  },
+  "modal": {
+    "ok": "OK",
+    "cancel": "CANCEL",
+    "close": "CLOSE",
+    "confirm": "CONFIRM",
+    "large": "Large",
+    "largeTitle": "Large Modal",
+    "medium": "Medium",
+    "mediumTitle": "Medium Modal",
+    "small": "Small",
+    "smallTitle": "Small Modal",
+    "static": "Static",
+    "staticMessage": "This is a static modal, backdrop click will not close it.",
+    "staticTitle": "Static Modal",
+    "title": "Modals"
+  },
+  "fileUpload": {
+    "advancedMediaGallery": "Advanced, Media Gallery",
+    "advancedUploadList": "Advanced, Upload List",
+    "mediaGallery": "Media Gallery",
+    "uploadList": "Upload List",
+    "single": "Single",
+    "dragNdropFiles": "Drag’n’drop files or",
+    "uploadedOn": "Uploaded on",
+    "fileDeleted": "File was succesfully deleted.",
+    "undo": "Undo",
+    "preview": "Preview",
+    "delete": "Delete",
+    "deleteFile": "Delete file",
+    "uploadFile": "Upload file",
+    "uploadMedia": "Upload media",
+    "addAttachment": "Add attachment"
+  },
+  "tags": {
+    "default": "Default",
+    "removable": "Removable",
+    "colored": "Colored"
+  },
+  "navbar": {
+    "messageUs": "Send us your questions or feedback to",
+    "gogoboard": "GoGo Board",
+    "raspberrypi": "Raspberry Pi",
+    "program": "Programming",
+    "show_widgets": "Click to show Widgets",
+    "hide_widgets": "Click to hide Widgets"
+  },
+  "notifications": {
+    "all": "See all notifications",
+    "sentMessage": "{name} sent you a message",
+    "uploadedZip": "{name} uploaded a new Zip file with {type}",
+    "startedTopic": "{name} started a new topic"
+  },
+  "progressBars": {
+    "basic": "Basic",
+    "basicVertical": "Basic Vertical",
+    "circle": "Circle",
+    "colorFulTitle": "Colorful Bars",
+    "thin": "Thin",
+    "thinVertical": "Thin Vertical",
+    "thick": "Thick",
+    "title": "Progress Bars"
+  },
+  "tables": {
+    "basic": "Basic Table",
+    "styled": "Colors, Icons, Labels",
+    "advanced": "Search & Pagination",
+    "headings": {
+      "city": "City",
+      "email": "Email",
+      "name": "Name",
+      "score": "Score"
+    },
+    "dataTable": {
+      "noDataAvailable": "No Data Available"
+    }
+  },
+  "treeView": {
+    "basic": "Basic",
+    "icons": "Icons",
+    "selectable": "Selectable",
+    "editable": "Editable",
+    "advanced": "Advanced"
+  },
+  "cards": {
+    "cards": "Cards",
+    "fixed": "Fixed",
+    "floating": "Floating",
+    "contentText": "The unique stripes of zebras make them one of the animals most familiar to people.",
+    "rowHeight": "Row height",
+    "title": {
+      "dark": "Dark background",
+      "bright": "Very bright card",
+      "titleOnImageNoOverlay": "Title on image, but no overlay",
+      "normal": "Perfectly normal card",
+      "overlayAndTextOnImage": "Card with overlay and text on top of image",
+      "stripeNoImage": "Striped card without image"
+    },
+    "button": {
+      "main": "Main",
+      "cancel": "Cancel"
+    },
+    "link": {
+      "edit": "Edit",
+      "setAsDefault": "Set as default",
+      "delete": "Delete",
+      "traveling": "Traveling",
+      "france": "France",
+      "review": "Review",
+      "feedback": "Leave feedback",
+      "readFull": "Read full article",
+      "secondaryAction": "Secondary action",
+      "action1": "Action 1",
+      "action2": "Action 2"
+    }
+  }
+}

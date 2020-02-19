@@ -1,0 +1,6 @@
+build/*.js
+config/*.js
+src/components/gogoboard/gogo-elements/*
+src/components/program/ProgramAndBlockly.vue
+src/services/*
+src/components/program/*

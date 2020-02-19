@@ -1,0 +1,32 @@
+{
+  "CAT_COMMON": "ทั่วไป",
+  "CAT_LOGIC": "ตรรกะ",
+  "CAT_LOOPS": "การวนซ้ำ",
+  "CAT_MATH": "คณิตศาสตร์",
+  "CAT_SENSING": "เซ็นเซอร์",
+  "CAT_DC_MOTOR": "มอเตอร์กระแสตรง",
+  "CAT_SERVO_MOTOR": "มอเตอร์เซอร์โว",
+  "CAT_SOUND": "เสียง",
+  "CAT_TIME": "เวลา",
+  "CAT_IR_CONTROL": "รีโมตคอนโทรล",
+  "CAT_BUILTIN_DISPLAY": "หน้าจอ",
+  "CAT_ADDON_MODULES": "ส่วนขยาย",
+  "CAT_ADDON_CLOCK": "โมดูลนาฬิกา",
+  "CAT_ADDON_DISPLAY": "โมดูลหน้าจอ",
+  "CAT_ADDON_VOICE": "โมดูลเสียง",
+  "CAT_ADDON_I2C": "ส่วนขยาย I2C",
+
+  "CAT_RASPBERRY_PI": "ราสเบอรี่พาย",
+  "CAT_CAMERA": "กล้อง",
+  "CAT_CLOUD_SERVICE": "บริการคลาวด์",
+  "CAT_DATA_LOGGING": "บันทึกข้อมูล",
+  "CAT_EMAIL": "อีเมล์",
+  "CAT_PI_GOGO_COM": "สื่อสารกับโกโก",
+  "CAT_PI_IMAGE": "รูปภาพ",
+  "CAT_PI_SOUND": "เสียง",
+  "CAT_PI_SMS": "ส่ง SMS",
+  
+  "CAT_DEFINITION": "การนิยามเงื่อนไข",
+  "VARIABLES": "ตัวแปร",
+  "PROCEDURES": "กระบวนการ"
+}

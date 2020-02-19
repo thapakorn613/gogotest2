@@ -1,0 +1,9 @@
+{
+  "PI_CLOUD_SEND_IFTTT_EVENT": "Send IFTTT event",
+  "PI_CLOUD_WITH_VALUE": "with value",
+  "PI_CLOUD_SEND_TELEGRAM": "Send Telegram",
+  "PI_CLOUD_TELEGRAM_MESSAGE": "Message",
+  "PI_CLOUD_TELEGRAM_IMAGE": "Image",
+  "PI_CLOUD_TELEGRAM_VALUE": "value",
+  "PI_CLOUD_TELEGRAM_MESSAGE_EQUAL": "Telegram message is equal to"
+}

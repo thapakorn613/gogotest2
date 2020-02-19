@@ -1,0 +1,10 @@
+{
+  "MOD_CLOCK_GET": "get",
+  "MOD_CLOCK_DAY": "day",
+  "MOD_CLOCK_MONTH": "month",
+  "MOD_CLOCK_YEAR": "year",
+  "MOD_CLOCK_HOUR": "hour",
+  "MOD_CLOCK_MINUTE": "minute",
+  "MOD_CLOCK_SECOND": "second",
+  "MOD_CLOCK_DAY_OF_WEEK": "day of week"
+}

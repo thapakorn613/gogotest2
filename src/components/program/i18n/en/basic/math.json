@@ -1,0 +1,12 @@
+{
+    "MATH_NUMBER_SERVO_TOOLTIP": "A number for servo motor.",
+    "MATH_NUMBER_MOTOR_TOOLTIP": "A number for motor power",
+    "MATH_RANDOM_NUMBER": "random number",
+    "MATH_INCREASE": "increase",
+    "MATH_INCREASE_TOOLTIP": "Increase a variable value by number.",
+    "MATH_DECREASE": "decrease",
+    "MATH_DECREASE_TOOLTIP": "Decrease a variable value by number.",
+    "MATH_BY": "by",
+    "MATH_OPERATOR_TOOLTIP": "Reports operation of two inputs.",
+    "MATH_RANDOM_TOOLTIP": "Reports pseudorandom 16 bit value."
+}

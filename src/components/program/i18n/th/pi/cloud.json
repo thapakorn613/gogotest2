@@ -1,0 +1,9 @@
+{
+  "PI_CLOUD_SEND_IFTTT_EVENT": "ส่งอีเวนท์ IFTTT ชื่อ",
+  "PI_CLOUD_WITH_VALUE": "ด้วยค่า",
+  "PI_CLOUD_SEND_TELEGRAM": "ส่ง",
+  "PI_CLOUD_TELEGRAM_MESSAGE": "ข้อความ",
+  "PI_CLOUD_TELEGRAM_IMAGE": "รูปภาพ",
+  "PI_CLOUD_TELEGRAM_VALUE": "ไปยัง Telegram ด้วยค่า",
+  "PI_CLOUD_TELEGRAM_MESSAGE_EQUAL": "ข้อความจาก Telegram ตรงกับ"
+}

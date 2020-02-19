@@ -1,0 +1,14 @@
+{
+    "SENSOR_SENSOR": "sensor",
+    "SENSOR_SENSOR_TOOLTIP": "Reports value of specific sensor.",
+    "SENSOR_SWITCH_ON_SENSOR": "switch",
+    "SENSOR_SWITCH_TOOLTIP": "Return True if the switch on the specific sensor port is pressed.",
+    "SENSOR_IS_PRESSED": "is pressed?",
+    "SENSOR_IF_SWITCH_ON_SENSOR": "if switch",
+    "SENSOR_JUST_PRESSED": "just pressed",
+    "SENSOR_JUST_PRESSED_TOOLTIP": "Do statements once when the switch just pressed.",
+
+    "SENSOR_JUST_RELEASED": "just released",
+    "SENSOR_JUST_RELEASED_TOOLTIP": "Do statements once when the switch just released."
+
+}

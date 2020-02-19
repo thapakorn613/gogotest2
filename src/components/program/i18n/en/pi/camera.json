@@ -1,0 +1,10 @@
+{
+  "PI_CAMERA_USE": "Use camera",
+  "PI_CAMERA_CLOSE": "Close camera",
+  "PI_CAMERA_START_FIND_FACE": "Start Find-Face",
+  "PI_CAMERA_STOP_FIND_FACE": "Stop Find-Face",
+  "PI_CAMERA_TAKE_SNAPSHOT": "Take snapshot",
+  "PI_CAMERA_FOUND_FACE": "Found a Face?",
+  "PI_CAMERA_IS_ON": "Camera is on?",
+  "PI_CAMERA_FIND_FACE_IS_ON": "Find-Face is on?"
+}

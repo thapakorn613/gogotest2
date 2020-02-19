@@ -1,0 +1,5 @@
+{
+    "IR_GET_IR": "get infrared",
+    "IR_NEW_IR": "new infrared?",
+    "IR_NEW_IR_TOOLTIP": "Reports whether infrared value has been received."
+}

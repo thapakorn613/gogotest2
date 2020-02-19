@@ -1,0 +1,10 @@
+{
+  "MOD_CLOCK_GET": "ค่า",
+  "MOD_CLOCK_DAY": "วัน",
+  "MOD_CLOCK_MONTH": "เดือน",
+  "MOD_CLOCK_YEAR": "ปี",
+  "MOD_CLOCK_HOUR": "ชั่วโมง",
+  "MOD_CLOCK_MINUTE": "นาที",
+  "MOD_CLOCK_SECOND": "วินาที",
+  "MOD_CLOCK_DAY_OF_WEEK": "ลำดับวันในสัปดาห์"
+}

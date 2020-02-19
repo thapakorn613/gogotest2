@@ -1,0 +1,557 @@
+{
+  "auth": {
+    "agree": "I agree to",
+    "alreadyJoined": "Already joined?",
+    "createAccount": "Create account",
+    "createNewAccount": "Create account",
+    "email": "Email",
+    "login": "Login",
+    "password": "Password",
+    "signUp": "Sign Up",
+    "termsOfUse": "Terms of Use.",
+    "welcome": "ยินดีต้อนรับ!"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "buttons": {
+    "advanced": "Icons, Groups, Dropdowns",
+    "button": "BUTTON",
+    "colors": "Colors",
+    "disabled": "DISABLED",
+    "dropdown": "DROPDOWN",
+    "hover": "HOVER",
+    "main": "Primary & Secondary Buttons",
+    "micro": "MICRO",
+    "pressed": "PRESSED",
+    "small": "SMALL"
+  },
+  "charts": {
+    "horizontalBarChart": "Horizontal Bar Chart",
+    "verticalBarChart": "Vertical Bar Chart",
+    "lineChart": "Line Chart",
+    "pieChart": "Pie Chart",
+    "donutChart": "Donut Chart",
+    "bubbleChart": "Bubble Chart"
+  },
+  "dashboard": {
+    "dataVisualization": "Data Visualization",
+    "success": "SUCCESS",
+    "successMessage": "You successfully read this important alert message.",
+    "elements": "Elements",
+    "features": "Features",
+    "setupProfile": "Setup Profile",
+    "teamMembers": "Team Members",
+    "usersAndMembers": "Users & Members",
+    "versions": "Versions"
+  },
+  "global": {
+    "warning_confirm": {
+      "title": "คุณแน่ใจ?",
+      "message": "โปรแกรมของคุณจะไม่สามารถกลับคืนได้",
+      "yes": "ใช่",
+      "cancel": "ยกเลิก"
+    },
+    "saving": {
+      "title": "กำลังบันทึก"
+    },
+    "loading": {
+      "title": "กำลังโหลด"
+    }
+  },
+  "plugin": {
+    "noplugin_header": "ปลั๊กอินไม่ทำงาน",
+    "long_desc": "ดูเหมือนว่าคุณยังไม่ได้ติดตั้งโปรแกรม GoGo Plugin",
+    "long_desc_2nd": "หรือ หากคุณติดตั้งแล้วแต่ยังไม่ได่เปิดโปรแกรมไว้",
+    "download": "ดาวน์โหลด",
+    "installed_and_runing": "คุณได้ตืดตั้งโปรแกรมสำเร็จตและโปรแกรมกำลังทำงานอยู่"
+  },
+  "gogoboard": {
+    "headers":{
+      "is_connected": "บอร์ดเชื่อมต่ออยู่",
+      "is_not_connected": "บอร์ดยังไม่ได้เชื่อมต่อ",
+      "ping": "บอร์ดยังทำงานอยู่หรือไม่?",
+      "motors": "เอาต์พุต (มอเตอร์)",
+      "sensors": "อินพุต (เซ็นเซอร์)",
+      "labs": "รีโมต แลป"
+    },
+    "firmware_version_is": "รุ่นของเฟิร์มแวร์คือ",
+    "ping_panel": {
+      "beep": "ส่งเสียงบี๊บ",
+      "show_button": "แสดง",
+      "show_placeholder": "ข้อความหรือตัวเลข",
+      "ir_received_code": "รหัสอินฟราเรด"
+    },
+    "lab_panel": {
+      "lab1": "แล็ปที่ 1 : ควบคุมรถ",
+      "lab2": "แล็ปที่ 2 : แปลงผักอัตโนมัติ",
+      "lab3": "แล็ปที่ 3 : พิชิตเขาวงกต"
+    },
+    "motor": {
+      "slect_motor_port": "เลือกพอร์ทที่ต้องการสั่งงาน",
+      "click_to_select": "คลิกเพื่อเลือกพอร์ท",
+      "click_to_unselect": "คลิกเพื่อไม่เลือกพอร์ท",
+
+      "on": "สั่งเปิด",
+      "off": "สั่งปิด",
+      "ccw": "หมุนทวนเข็ม",
+      "rd": "กลับทิศ",
+      "cw": "หมุมตามเข็ม",
+
+      "motor_power": "ระดับพลังงาน",
+      "set_power": "ตั้งค่าพลังงาน"
+      
+    },
+    "servo": {
+      "servo_head": "ตำแหน่งเซอร์โว",
+      "set_head": "ตั้งหัวเซอร์โว",
+      "set_duty": "ตั้งหัวเซอร์โว"
+    },
+    "sensor": {
+      "label": "เซ็นเซอร์"
+    },
+    "tabs": {
+      "dc_motor" : "มอเตอร์กระแสตรง",
+      "servo_motor": "มอเตอร์เซอร์โว"
+    }
+  },
+  "raspberry": {
+    "headers" : {
+      "raspberry_pi": "ราสเบอร์รี่พาย",
+      "is_connected": "เชื่อต่ออยู่",
+      "is_not_connected": "ไม่ได้เชื่อมต่อ",
+      "info": "ข้อมูลทั่วไป",
+      "keyvalue": "ข้อความล่าสุด (Key-Value)",
+      "network": "การเชื่อมต่อเครือข่าย",
+      "homescreen": "GoGo Home Screen",
+      "camera": "กล้อง"
+    },
+    "messages": {
+      "pi_is_on": "Raspberry Pi is on",
+      "pi_is_disconnected": "Raspberry Pi is disconnected"
+    },
+    "info": {
+      "shutdown": "Shutdown",
+      "reboot": "Reboot",
+      "revistion_is": "รุ่นของราสเบอร์รี่พายคือ",
+      "cpu_load": "การใช้งาน CPU",
+      "cpu_temp": "อุณหภูมิ CPU",
+      "mem_used": "การใช้งานหน่วยความจำ (แรม)"
+    },
+    "key_value": {
+      "key": "Key",
+      "value": "Value"
+    },
+    "network" : {
+      "wlan_ip": "Wireless IP Address",
+      "lan_ip": "IP Address",
+      "ssid": "SSID",
+      "password": "Password",
+      "connect": "เชื่อมต่อ",
+      "show_password": "แสดงรหัสผ่าน"
+    },
+    "wifi_status": {
+      "0": "",
+      "1": "กำลังเชื่อมต่อ... (อาจจะใช้เวลาสักพัก)",
+      "2": "สำเร็จ",
+      "3": "รหัสผิด/การเชื่อมต่อล้มเหลว",
+      "4": "ไม่พบ SSID",
+      "5": "Unknown Error"
+    },
+    "camera": {
+      "camera_is": "กล้องถูก",
+      "on": "เปิดอยู่",
+      "off": "ปิดอยู่",
+      "use": "ใช้งาน",
+      "close": "ปิด",
+      "preview": "ดูรูปตัวอย่าง",
+      "start_find_face": "เริ่มค้นหาใบหน้า",
+      "stop_find_face": "หยุดการค้นหาใบหน้า",
+      "take_snapshot": "ถ่ายรูป",
+      "disabled": "ปิดการทำงาน",
+      "searching": "กำลังค้นหา..",
+      "found_face": "เจอใบหน้า"
+    }
+  },
+  "program": {
+    "menus": {
+      "menus": "เมนู",
+
+      "new_project": "สร้างโปรเจคใหม่",
+      "new_project_desc": "สร้างโปรเจคใหม่",
+
+      "my_projects": "โปรเจคของฉัน",
+      "my_projects_desc": "แสดงโปรเจคที่บันทึกไว้บนคลาวด์",
+
+      "project_example": "ตัวอย่างโปรเจค",
+      "project_example_desc": "แสดงตัวอย่างโปรเจค",
+
+      "save": "บันทึก",
+      "save_desc": "บันทึกโปรแกรมไว้บนคลาวด์",
+
+      "save_as": "บันทึกสำเนาเป็น...",
+      "save_as_desc": "บันทึกโปรแกรมไว้บนคลาวด์เป็นชื่อใหม่",
+
+      "open": "เปิดไฟล์",
+      "open_desc": "เปิดไฟล์ที่บันทึกไว้บนคอมพิวเตอร์ของคุณ",
+
+      "import": "นำเข้าไฟล์",
+      "import_desc": "นำเข้าไฟล์ที่บันทึกไว้บนคอมพิวเตอร์ของคุณ (ยกเว้น main)",
+
+      "save_as_a_file": "บันทึกเป็นไฟล์",
+      "save_as_a_file_desc": "บันทึกโปรแกรมไว้บนคอมพิวเตอร์ของคุณ",
+
+      "share": "แชร์",
+      "share_desc": "แชร์โปรแกรมนี้แก่ผู้อื่น"
+
+    },
+    "cloud": {
+    },
+    "messages": {
+      "please_login": "กรุณาเข้าสู่ระบบก่อนใช้งาน",
+      "unable_to_save": "ไม่่สามารถบันทึกได้",
+      "unable_to_load": "ไม่่สามารถเปิดได้",
+      "saving": "กำลังบันทึก ...",
+      "saved_title": "บันทึกแล้ว!",
+      "save_success": "โปรเจคของคุณได้ถูกบันทึกแล้ว",
+      "updated_title": "บันทึกแล้ว!",
+      "update_success": "โปรเจคของคุณได้ถูกบันทึกแล้ว",
+      "opened_title": "เปิดสำเร็จ!",
+      "open_success": "โปรเจคของคุณได้ถูกเปิดแล้ว",
+      "shared_title": "สำเร็จ!",
+      "share_success": "แชร์โปรแกรมแก่ผู้อื่นผ่านลิงค์นี้",
+      "create_title": "สร้างสำเร็จ!",
+      "create_text": "สร้างพื้นที่สำหรับโปรเจคใหม่เรียบร้อย"
+    },
+    "footer": {
+      "undo": "ย้อนกลับ",
+      "redo": "ทำซ้ำ",
+      "cleanup": "จัดเรียงบล็อค",
+      "run": "เริ่มทำงาน",
+      "stop": "หยุดทำงาน",
+      "download": "เขียนโปรแกรมลงบอร์ด",
+      "download_short": "ดาวน์โหลด"
+    }
+  },
+  "project": {
+    "headers": {
+      "my_projects": "โปรเจคของฉัน",
+      "new_project": "โปรเจค",
+      "edit_project": "Edit Project",
+      "delete_project": "Delete confirmation"
+    },
+    "form": {
+      "name": "ชื่อโปรเจค",
+      "desc": "คำอธิบายโปรเจค",
+      "search": "ค้นหาจากชื่อหรือคำอธิบาย"
+    },
+
+    "buttons": {
+      "open": "เปิด",
+      "edit": "แก้ไข",
+      "delete": "ลบ",
+
+      "save": "บันทึก",
+      "cancel": "ยกเลิก",
+
+      "confirm_delete": "ยืนยันการลบ"
+    },
+    "deletion": {
+      "delete_confirm_text": "Do you really want to delete",
+      "deleted_title": "Deleted!",
+      "delete_success_1": "Project ",
+      "delete_success_2": "has been deleted!",
+      "delete_fail": "Error "
+    },
+
+    "no_project": "ไม่มีโปรเจค"
+  },
+  "pages": {
+    "about": {
+      "title": "เกี่ยวกับ"
+    },
+    "language": {
+      "title": "เลือกภาษาของคุณ"
+    }
+  },
+  "user": {
+    "language": "เปลี่ยนภาษา",
+    "login": "เข้าสู่จากระบบ",
+    "logout": "ออกจากระบบ",
+    "profile": "โปรไฟล์ของฉัน",
+    "give_feedback": "ให้ข้อเสนอแนะ",
+    "about": "เกี่ยวกับ",
+    "message": {
+      "logged_out_header": "ออกจากระบบแล้ว!",
+      "logged_out": "คุณได้ออกจากระบบเรียบร้อยแล้ว"
+    }
+  },
+  "notificationsPage": {
+    "alerts": {
+      "title": "Alerts",
+      "success": "SUCCESS",
+      "successMessage": "You successfully read this important alert message.",
+      "info": "INFO",
+      "infoMessage": "This alert needs your attention, but it's not super important.",
+      "warning": "WARNING",
+      "warningMessage": "Better check yourself, you're not looking too good.",
+      "danger": "DANGER",
+      "dangerMessage": "Change a few things up and try submitting again."
+    },
+    "popovers": {
+      "title": "Tooltips & Popovers",
+      "popoverTitleLabel": "Popover Title",
+      "popoverTextLabel": "Popover Text",
+      "popoverIconLabel": "Popover Icon (fontawesome)",
+      "showPopover": "Show Popover",
+      "topTooltip": "top tooltip",
+      "rightTooltip": "rightside tooltip",
+      "leftTooltip": "left",
+      "bottomTooltip": "below"
+    },
+    "toasts": {
+      "title": "Toasts",
+      "textLabel": "Text",
+      "durationLabel": "Duration (milliseconds)",
+      "iconLabel": "Icon (fontawesome)",
+      "fullWidthLabel": "Fullwidth",
+      "launchToast": "Launch toast"
+    }
+  },
+  "extra": {
+    "tabs": {
+      "title": "Tabs",
+      "maps": "Maps",
+      "overview": "Overview",
+      "setupProfile": "Setup Profile"
+    },
+    "chat": "Chat",
+    "profileCard": "Profile Card"
+  },
+  "forms": {
+    "controls": {
+      "female": "Female",
+      "male": "Male",
+      "title": "Checkboxes, Radios, Switches",
+      "radioDisabled": "Disabled Radio",
+      "radio": "Radio",
+      "subscribe": "Subscribe to newsletter"
+    },
+    "dateTimePicker": {
+      "title": "Date time pickers",
+      "basic": "Basic",
+      "time": "Time",
+      "range": "Range",
+      "multiple": "Multiple",
+      "disabled": "Disabled",
+      "customFirstDay": "Custom first day",
+      "customDateFormat": "Custom date format"
+    },
+    "inputs": {
+      "emailValidatedSuccess": "Email (validated with success)",
+      "emailValidated": "Email (validated)",
+      "inputWithIcon": "Input With Icon",
+      "inputWithButton": "Input With Button",
+      "inputWithClearButton": "Input With Clear Button",
+      "inputWithRoundButton": "Input With Round Button",
+      "textInput": "Text Input",
+      "textInputWithDescription": "Text Input (with description)",
+      "textArea": "Text Area",
+      "title": "Inputs",
+      "upload": "UPLOAD"
+    },
+    "mediumEditor": {
+      "title": "Medium Editor"
+    },
+    "selects": {
+      "country": "Country Select",
+      "countryMulti": "Country Multi Select",
+      "multi": "Multi Select",
+      "simple": "Simple Select",
+      "title": "Selects"
+    },
+    "wizard": {
+      "name": "Name",
+      "completed": "Wizard completed!",
+      "confirmSelection": "Confirm selection",
+      "rich": "Rich Wizard",
+      "simple": "Simple Wizard",
+      "stepOne": "Step 1. Name",
+      "stepTwo": "Step 2. Country",
+      "stepThree": "Step 3. Confirm",
+      "verticalRich": "Vertical Rich Wizard",
+      "verticalSimple": "Vertical Simple Wizard"
+    }
+  },
+  "grid": {
+    "desktop": "Desktop Grid",
+    "fixed": "Fixed Grid",
+    "offsets": "Offsets",
+    "responsive": "Responsive Grid"
+  },
+  "icons": {
+    "back": "Back to icons",
+    "none": "No icons found",
+    "search": "Icon search",
+    "title": "Icons"
+  },
+  "spinners": {
+    "title": "Spinners",
+    "poweredBy": "Powered by"
+  },
+  "language": {
+    "brazilian_portuguese": "Português",
+    "english": "English",
+    "spanish": "Spanish",
+    "thai": "ภาษาไทย"
+  },
+  "menu": {
+    "auth": "Auth",
+    "buttons": "Buttons",
+    "charts": "Charts",
+    "colorPickers": "Color Pickers",
+    "dashboard": "Dashboard",
+    "extra": "Extra",
+    "formElements": "Form Elements",
+    "forms": "Forms",
+    "formWizards": "Form Wizards",
+    "mediumEditor": "Medium Editor",
+    "grid": "Grid",
+    "icons": "Icons",
+    "cards": "Cards",
+    "spinners": "Spinners",
+    "login": "Login",
+    "maps": "Maps",
+    "modals": "Modals",
+    "notifications": "Notifications",
+    "progressBars": "Progress Bars",
+    "signUp": "Sign up",
+    "statistics": "Statistics",
+    "tables": "Tables",
+    "tags": "Tags",
+    "typography": "Typography",
+    "uiElements": "UI Elements",
+    "treeView": "Tree view",
+    "dateTimePickers": "Date time pickers",
+    "fileUpload": "File Upload"
+  },
+  "messages": {
+    "all": "See all messages",
+    "new": "New messages from {name}"
+  },
+  "modal": {
+    "ok": "บันทึก",
+    "cancel": "ยกเลิก",
+    "close": "ปิด",
+    "confirm": "ยืนยัน",
+    "large": "Large",
+    "largeTitle": "Large Modal",
+    "medium": "Medium",
+    "mediumTitle": "Medium Modal",
+    "small": "Small",
+    "smallTitle": "Small Modal",
+    "static": "Static",
+    "staticMessage": "This is a static modal, backdrop click will not close it.",
+    "staticTitle": "Static Modal",
+    "title": "Modals"
+  },
+  "fileUpload": {
+    "advancedMediaGallery": "Advanced, Media Gallery",
+    "advancedUploadList": "Advanced, Upload List",
+    "mediaGallery": "Media Gallery",
+    "uploadList": "Upload List",
+    "single": "Single",
+    "dragNdropFiles": "Drag’n’drop files or",
+    "uploadedOn": "Uploaded on",
+    "fileDeleted": "File was succesfully deleted.",
+    "undo": "Undo",
+    "preview": "Preview",
+    "delete": "Delete",
+    "deleteFile": "Delete file",
+    "uploadFile": "Upload file",
+    "uploadMedia": "Upload media",
+    "addAttachment": "Add attachment"
+  },
+  "tags": {
+    "default": "Default",
+    "removable": "Removable",
+    "colored": "Colored"
+  },
+  "navbar": {
+    "messageUs": "Send us your questions or feedback to",
+    "gogoboard": "GoGo Board",
+    "raspberrypi": "Raspberry Pi",
+    "program": "Programming",
+    "show_widgets": "Click to show Widgets",
+    "hide_widgets": "Click to hide Widgets"
+  },
+  "notifications": {
+    "all": "See all notifications",
+    "sentMessage": "{name} sent you a message",
+    "uploadedZip": "{name} uploaded a new Zip file with {type}",
+    "startedTopic": "{name} started a new topic"
+  },
+  "progressBars": {
+    "basic": "Basic",
+    "basicVertical": "Basic Vertical",
+    "circle": "Circle",
+    "colorFulTitle": "Colorful Bars",
+    "thin": "Thin",
+    "thinVertical": "Thin Vertical",
+    "thick": "Thick",
+    "title": "Progress Bars"
+  },
+  "tables": {
+    "basic": "Basic Table",
+    "styled": "Colors, Icons, Labels",
+    "advanced": "Search & Pagination",
+    "headings": {
+      "city": "City",
+      "email": "Email",
+      "name": "Name",
+      "score": "Score"
+    },
+    "dataTable": {
+      "noDataAvailable": "No Data Available"
+    }
+  },
+  "treeView": {
+    "basic": "Basic",
+    "icons": "Icons",
+    "selectable": "Selectable",
+    "editable": "Editable",
+    "advanced": "Advanced"
+  },
+  "cards": {
+    "cards": "Cards",
+    "fixed": "Fixed",
+    "floating": "Floating",
+    "contentText": "The unique stripes of zebras make them one of the animals most familiar to people.",
+    "rowHeight": "Row height",
+    "title": {
+      "dark": "Dark background",
+      "bright": "Very bright card",
+      "titleOnImageNoOverlay": "Title on image, but no overlay",
+      "normal": "Perfectly normal card",
+      "overlayAndTextOnImage": "Card with overlay and text on top of image",
+      "stripeNoImage": "Striped card without image"
+    },
+    "button": {
+      "main": "Main",
+      "cancel": "Cancel"
+    },
+    "link": {
+      "edit": "Edit",
+      "setAsDefault": "Set as default",
+      "delete": "Delete",
+      "traveling": "Traveling",
+      "france": "France",
+      "review": "Review",
+      "feedback": "Leave feedback",
+      "readFull": "Read full article",
+      "secondaryAction": "Secondary action",
+      "action1": "Action 1",
+      "action2": "Action 2"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "CAT_COMMON": "Common Blocks",
+  "CAT_LOGIC": "Logic",
+  "CAT_LOOPS": "Loops",
+  "CAT_MATH": "Math",
+  "CAT_SENSING": "Sensing",
+  "CAT_DC_MOTOR": "DC Motor",
+  "CAT_SERVO_MOTOR": "Servo Motor",
+  "CAT_SOUND": "Sound",
+  "CAT_TIME": "Time",
+  "CAT_IR_CONTROL": "IR Control",
+  "CAT_BUILTIN_DISPLAY": "Built-in Display",
+  "CAT_ADDON_MODULES": "Add-on Modules",
+  "CAT_ADDON_CLOCK": "Clock Module",
+  "CAT_ADDON_DISPLAY": "Display Module",
+  "CAT_ADDON_VOICE": "Voice Recorder",
+  "CAT_ADDON_I2C": "I2C Extension",
+  
+  "CAT_RASPBERRY_PI": "Raspberry Pi",
+  "CAT_CAMERA": "Camera",
+  "CAT_CLOUD_SERVICE": "Cloud Services",
+  "CAT_DATA_LOGGING": "Data recording",
+  "CAT_EMAIL": "E-mail",
+  "CAT_PI_GOGO_COM": "GoGo Communication",
+  "CAT_PI_IMAGE": "Image",
+  "CAT_PI_SOUND": "Sound",
+  "CAT_PI_SMS": "Text message",
+
+  "CAT_DEFINITION": "Definition Blocks",
+  "VARIABLES": "Variables",
+  "PROCEDURES": "Procedures"
+}

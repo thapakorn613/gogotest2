@@ -1,0 +1,12 @@
+{
+  "PI_GOGO_KEY": "Key",
+  "PI_GOGO_KEY_TOOLTIP": "Reports value of specific key.",
+
+  "PI_GOGO_EQUAL_TO": "is equal to",
+  "PI_GOGO_NUM_VAL_OF_KEY": "Number value of key",
+  "PI_GOGO_NUM_OF_KEY_TOOLTIP": "Reports the number value of a specific key.",
+
+  "PI_GOGO_SUBMIT_TEXT": "Submit text",
+  "PI_GOGO_SUBMIT_NUMBER": "Submit number",
+  "PI_GOGO_TO_TOPIC": "to topic"
+}

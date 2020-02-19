@@ -1,0 +1,11 @@
+{
+    "CONTROL_IF_ELSE_TOOLTIP": "If a value is true, then do the first block of statements.\\n' +         'Otherwise, do the second block of statements.",
+    "LOGIC_BECOMES_TRUE": "becomes true",
+    "LOGIC_ONE_TIME": "one time",
+    "LOGIC_EQUAL_TOOLTIP": "Reports boolean comparison of two inputs.",
+    "LOGIC_IS_IN_BETWEEN": "is in between",
+    "LOGIC_BETWEEN_AND": "and",
+    "LOGIC_BETWEEN_TOOLTIP": "Reports True if input is in between the given range.",
+    "LOGIC_ANDOR_TOOLTIP": "Reports bitwise AND/OR of two inputs.",
+    "LOGIC_NOT": "not"
+}

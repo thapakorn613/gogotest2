@@ -1,0 +1,13 @@
+{
+    "LOOP_FOREVER": "วนซ้ำตลอด",
+    "LOOP_FOREVER_TOOLTIP": "Indefinitely executes block.",
+    "LOOP_EACH_TIME_WAIT": "แต่ละรอบรอ",
+    "LOOP_REPEAT": "ทำซ้ำ",
+    "LOOP_REPEAT_TOOLTIP": "Repeats block for specific number of times.",
+    "LOOP_TIMES": "ครั้ง",
+    "LOOP_WAIT_UNTIL": "รอจนกว่า",
+    "LOOP_WAIT_UNTIL_TOOLTIP": "Repeatedly executes block until it evaluates to true.",
+    "LOOP_STOP_PROCEDURE": "หยุด",
+    "LOOP_STOP_PROCEDURE_TOOLTIP": "quit the current procedure."
+
+}

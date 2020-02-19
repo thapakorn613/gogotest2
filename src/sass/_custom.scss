@@ -1,0 +1,164 @@
+.icon-connect {
+  // color: #4caf50;
+  color: #15d41d;
+}
+
+.icon-disconnect {
+  // color: #ccc;
+  color: #b3d7e8;
+}
+
+// .button-motor-control {
+//   text-align: center;
+//   top: -27px;
+//   left: -7px;
+//   position: relative;
+// }
+
+.btn.btn-with-icon.rounded-icon i {
+  position: absolute;
+  left: 0.9rem;
+  top: 0.75rem;
+  font-size: 2rem;
+}
+
+.btn.btn-with-icon.rounded-icon i.little-adjust {
+  left: 0.7rem;
+}
+
+.btn.btn-with-icon.rounded-icon i.shift-right {
+  left: 1.25rem;
+}
+
+.tooltip-custom {
+  background-color: darkgray;
+}
+
+.btn-label {
+  margin-top: 8px;
+  text-align: center;
+  color: #888; 
+  margin-bottom: 3px;
+
+}
+
+.narrowPadding .tab-content {
+  padding-top: 2.3rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.space-top-bottom {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.vuestic-alert {
+  border-radius: $cc-radius;
+
+  &.alert-warning {
+    color: #a9850a;
+  }
+}
+
+.vue-tabs {
+  li {
+    a.active_tab {
+      &:before {
+        bottom: 6px !important;
+      }
+      &:after {
+        bottom: 4px !important;
+      }
+    }
+
+    span.title {
+      font-size: 16px;
+    }
+  }
+
+  .nav-tabs {
+    justify-content: center !important;
+  }
+}
+
+.vue-tooltip {
+  z-index: 2001 !important;
+
+  &.custom-tooltip {
+    background-color: #3a3a3af0;
+    z-index: 1001;
+    border-radius: 6px;
+    .tooltip-arrow {
+      border-color: #3a3a3af0;
+      
+    }
+  }
+}
+
+.tooltip {
+  // ...
+
+  &.popover {
+    $color: #f9f9f9;
+
+    .popover-inner {
+      background: $color;
+      color: black;
+      padding: 24px;
+      border-radius: 5px;
+      box-shadow: 0 5px 30px rgba(black, .1);
+    }
+
+    .popover-arrow {
+      border-color: $color;
+    }
+  }
+}
+
+
+.btn.btn-with-icon.rounded-icon {
+  // text-align: center;
+
+  i.fa {
+    position: inherit;
+    padding-left: 2px;
+    // left: 1.1rem;
+    // top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.swal2-container {
+
+  .swal2-popup.swal2-title {
+    font-size: 20px;
+  }
+
+  .success {
+    .swal2-content, .swal2-title {
+      // color: #8dc90f !important;
+      color: #8fcc09;
+    }
+  }
+}
+
+// Clone of sweet alert
+.success {
+  justify-content: center;
+  text-align: center;
+
+  .swal2-content, .swal2-title {
+    // color: #8dc90f !important;
+    color: #8fcc09;
+  }
+}
+
+
+.sweet-aleart-button-class {
+  line-height: 1 !important;
+  border-radius: 1.875rem !important;
+}
+
+.text-grey {
+  color: #555;
+}

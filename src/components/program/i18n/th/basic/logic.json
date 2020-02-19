@@ -1,0 +1,12 @@
+{
+    "CONTROL_IF_ELSE_TOOLTIP": "If a value is true, then do the first block of statements.\\n' +         'Otherwise, do the second block of statements.",
+    "LOGIC_BECOMES_TRUE": "กลายเป็นจริง",
+    "CONTROL_IF_STATE_CHANGE_TOOLTIP": "If input expression is true, then do some statements once.",
+    "LOGIC_ONE_TIME": "ครั้งเดียว",
+    "LOGIC_EQUAL_TOOLTIP": "Reports boolean comparison of two inputs.",
+    "LOGIC_IS_IN_BETWEEN": "มีค่าระหว่าง",
+    "LOGIC_BETWEEN_AND": "และ",
+    "LOGIC_BETWEEN_TOOLTIP": "Reports True if input is in between the given range.",
+    "LOGIC_ANDOR_TOOLTIP": "Reports bitwise AND/OR of two inputs.",
+    "LOGIC_NOT": "ไม่"
+}
