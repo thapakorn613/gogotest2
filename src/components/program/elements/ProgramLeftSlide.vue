@@ -1,5 +1,12 @@
 <template>
   <div class="program-left-slide">
+    <vuestic-widget class="chat-widget dashboard-widget" 
+        :icon="'a fa-check-circle-o'"
+        :headerBgColor="'#4287f5'" :headerTextColor="'#fff0dc'"
+        :headerText="$t('gogoboard.headers.dashboards')">
+        <dashboard-panel :irValue="gogo.irValue"></dashboard-panel>
+    </vuestic-widget>
+
     <vuestic-widget class="chat-widget lab-widget" 
         :icon="'fa fa-gamepad'"
         :headerBgColor="'#4287f5'" :headerTextColor="'#fff0dc'"
@@ -39,6 +46,7 @@ import SensorPanel from 'components/gogoboard/gogo-elements/SensorPanel.vue'
 import DisplayPanel from 'components/gogoboard/gogo-elements/DisplayPanel.vue'
 import PingPanel from 'components/gogoboard/gogo-elements/PingPanel.vue'
 import LabPanel from 'components/gogoboard/gogo-elements/LabPanel.vue'
+import DashboardPanel from 'components/gogoboard/gogo-elements/DashboardPanel.vue'
 
 export default {
   name: 'program-left-slide',
@@ -47,7 +55,8 @@ export default {
     SensorPanel,
     DisplayPanel,
     PingPanel,
-    LabPanel
+    LabPanel,
+    DashboardPanel
   },
   props: {
   },

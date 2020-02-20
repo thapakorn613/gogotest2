@@ -73,7 +73,8 @@
       "ping": "Is your board works?",
       "motors": "Output (Motors)",
       "sensors": "Input (Sensors)",
-      "labs": "Remote Lab"
+      "labs": "Remote Lab",
+      "dashboards": "Dashboard (Status)"
     },
     "firmware_version_is": "Firmware version is",
     "ping_panel": {
@@ -83,6 +84,16 @@
       "ir_received_code": "IR Received Code"
     },
     "lab_panel": {
+      "lab1": "Lab 1 : Car control",
+      "lab2": "Lab 2 : Smart farm",
+      "lab3": "Lab 3 : Maze runner"
+    },
+    "labdisplay_panel": {
+      "lab1": "Lab 1",
+      "lab2": "Lab 2",
+      "lab3": "Lab 3"
+    },
+    "labdetail_panel": {
       "lab1": "Lab 1 : Car control",
       "lab2": "Lab 2 : Smart farm",
       "lab3": "Lab 3 : Maze runner"
