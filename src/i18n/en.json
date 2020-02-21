@@ -88,6 +88,9 @@
       "lab2": "Lab 2 : Smart farm",
       "lab3": "Lab 3 : Maze runner"
     },
+    "dashboard_panel": {
+      "lab1": "Lab 1 : Car control"
+    },
     "labdisplay_panel": {
       "lab1": "Lab 1",
       "lab2": "Lab 2",
@@ -96,7 +99,12 @@
     "labdetail_panel": {
       "lab1": "Lab 1 : Car control",
       "lab2": "Lab 2 : Smart farm",
-      "lab3": "Lab 3 : Maze runner"
+      "lab3": "Lab 3 : Maze runner",
+
+      "name": "Name or Username",
+      "enter": "Enter",
+      "see_detail": "Lab Detail",
+      "detail": "See Detail"
     },
     "motor": {
       "slect_motor_port": "Select Motor Port(s)",
@@ -123,7 +131,9 @@
     },
     "tabs": {
       "dc_motor" : "DC Motor",
-      "servo_motor": "Servo Motor"
+      "servo_motor": "Servo Motor",
+      "lab_detail": "Detail",
+      "lab_status": "Status"
     }
   },
   "raspberry": {

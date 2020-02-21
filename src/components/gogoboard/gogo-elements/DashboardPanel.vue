@@ -5,11 +5,11 @@
     <lab-display-panel></lab-display-panel>
 
     <vue-tabs>
-      <v-tab :title="$t('gogoboard.tabs.dc_motor')" icon="ti-user">
-        <motor-control-panel></motor-control-panel>
+      <v-tab :title="$t('gogoboard.tabs.lab_detail')">
+        <lab-detail-panel></lab-detail-panel>
       </v-tab>
 
-      <v-tab :title="$t('gogoboard.tabs.servo_motor')">
+      <v-tab :title="$t('gogoboard.tabs.lab_status')">
         <servo-control-panel></servo-control-panel>
       </v-tab>
   </vue-tabs>
@@ -35,7 +35,7 @@ import { mapGetters, mapMutations } from 'vuex'
 import { VueTabs, VTab } from 'vue-nav-tabs'
 
 import LabDisplayPanel from './dashboard-elements/LabDisplayPanel.vue'
-import MotorControlPanel from './motor-elements/MotorControlPanel.vue'
+import LabDetailPanel from './dashboard-elements/LabDetailPanel.vue'
 import ServoControlPanel from './motor-elements/ServoControlPanel.vue'
 
 import 'vue-nav-tabs/themes/paper.css'
@@ -45,7 +45,7 @@ export default {
   // props: ['motors'],
   components: {
     LabDisplayPanel,
-    MotorControlPanel,
+    LabDetailPanel,
     ServoControlPanel,
     VueTabs,
     VTab
