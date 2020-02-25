@@ -149,10 +149,42 @@ Object.defineProperties(Vue.prototype, {
       })
     }
   },
-  $swalDetail: {
+  $swalDetail1: {
     get () {
       return this.$swal.mixin({
         title: this.$t('gogoboard.labdetail_panel.lab1'),
+        text: this.$t('gogoboard.labdetail_panel.see_detail'),
+        // type: 'warning',
+        showCancelButton: false,
+        confirmButtonColor: '#b0e049',
+        cancelButtonColor: '#e34a4a',
+        confirmButtonClass: 'sweet-aleart-button-class',
+        cancelButtonClass: 'sweet-aleart-button-class',
+        confirmButtonText: this.$t('global.warning_confirm.ok'),
+        cancelButtonText: this.$t('global.warning_confirm.cancel'),
+      })
+    }
+  },
+  $swalDetail2: {
+    get () {
+      return this.$swal.mixin({
+        title: this.$t('gogoboard.labdetail_panel.lab2'),
+        text: this.$t('gogoboard.labdetail_panel.see_detail'),
+        // type: 'warning',
+        showCancelButton: false,
+        confirmButtonColor: '#b0e049',
+        cancelButtonColor: '#e34a4a',
+        confirmButtonClass: 'sweet-aleart-button-class',
+        cancelButtonClass: 'sweet-aleart-button-class',
+        confirmButtonText: this.$t('global.warning_confirm.ok'),
+        cancelButtonText: this.$t('global.warning_confirm.cancel'),
+      })
+    }
+  },
+  $swalDetail3: {
+    get () {
+      return this.$swal.mixin({
+        title: this.$t('gogoboard.labdetail_panel.lab3'),
         text: this.$t('gogoboard.labdetail_panel.see_detail'),
         // type: 'warning',
         showCancelButton: false,

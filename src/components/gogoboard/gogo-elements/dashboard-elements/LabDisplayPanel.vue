@@ -14,7 +14,12 @@
         <span>{{ 'gogoboard.motor.slect_motor_port' | translate }}</span>
         <br><br>
     </div>-->
+        <!-- simplest prop - pass a string -->
+    <!--<LabDetailPanel title="This is my title"></LabDetailPanel>-->
 
+
+    <!--<label for="child-input">Child input: </label>
+    <input id="child-input" type="text" name="msg" v-model="childMessage" v-on:keyup="emitToParent">-->
     <div class="row justify-content-around">
 
       <div class="lab-area">
@@ -94,23 +99,25 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import LabDetailPanel from './LabDetailPanel.vue'
 
-var lab_selected = 0
+//var lab_selected = 0
 
 export default {
   name: 'lab-display-panel',
-  // props: ['motors'],
   components: {
+    LabDetailPanel
   },
   data () {
     return {
+      childMessage: '',
+      labIndex: ''
     }
   },
   methods: {
-    selectLab (labIndex) {
-      lab_selected = labIndex
-      localStorage.setItem("lab_selected", lab_selected);
-      console.log(localStorage.getItem("lab_selected"))
+    selectLab (event) {
+      //console.log(event)
+      this.$emit('childToParent', event)
     },
     ...mapMutations([
       'doGogoCmdObj', // map `this.doGogoCmd()` to `this.$store.commit('doGogoCmd')`

@@ -98,6 +98,7 @@
       "lab3": "Lab 3"
     },
     "labdetail_panel": {
+      "lab": "Lab 1 : Car control",
       "lab1": "Lab 1 : Car control",
       "lab2": "Lab 2 : Smart farm",
       "lab3": "Lab 3 : Maze runner",
@@ -134,7 +135,8 @@
       "dc_motor" : "DC Motor",
       "servo_motor": "Servo Motor",
       "lab_detail": "Detail",
-      "lab_status": "Status"
+      "lab_status": "Status",
+      "lab_test": "test"
     }
   },
   "raspberry": {
