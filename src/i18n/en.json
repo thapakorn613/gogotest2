@@ -50,7 +50,8 @@
       "title": "Are you sure?",
       "message": "You won't be able to revert this!",
       "yes": "Yes",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "ok": "Got it!!!"
     },
     "saving": {
       "title": "Saving"

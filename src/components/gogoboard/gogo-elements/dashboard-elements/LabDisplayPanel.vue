@@ -21,7 +21,7 @@
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
           v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
-          v-on:click="toggleMotor(0)">
+          v-on:click="selectLab(1)">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon fa fa-car lab-icon-1 fa-stack-1x "></i>
           <i class="lab-ban fa fa-stack-2x"
@@ -39,7 +39,7 @@
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
           v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
-          v-on:click="toggleMotor(0)">
+          v-on:click="selectLab(2)">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon fa fa-tree lab-icon-1 fa-stack-1x "></i>
           <i class="lab-ban fa fa-stack-2x"
@@ -57,7 +57,7 @@
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
           v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
-          v-on:click="toggleMotor(0)">
+          v-on:click="selectLab(3)">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon fa fa-arrows lab-icon-1 fa-stack-1x "></i>
           <i class="lab-ban fa fa-stack-2x"
@@ -95,6 +95,8 @@
 <script>
 import { mapGetters, mapMutations } from 'vuex'
 
+var lab_selected = 0
+
 export default {
   name: 'lab-display-panel',
   // props: ['motors'],
@@ -105,12 +107,10 @@ export default {
     }
   },
   methods: {
-    toggleMotor (motorIndex) {
-      this.doGogoCmdObj( {
-        cmd: 'toggleMotor',
-        params: motorIndex
-      } )
-      // this.gogoControls.toggleMotor(motorIndex)
+    selectLab (labIndex) {
+      lab_selected = labIndex
+      localStorage.setItem("lab_selected", lab_selected);
+      console.log(localStorage.getItem("lab_selected"))
     },
     ...mapMutations([
       'doGogoCmdObj', // map `this.doGogoCmd()` to `this.$store.commit('doGogoCmd')`

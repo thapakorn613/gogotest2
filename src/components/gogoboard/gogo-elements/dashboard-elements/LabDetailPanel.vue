@@ -1,8 +1,8 @@
 <template>
   <div class="lab-detail-panel">
     <div class="row justify-content-center">
-
-        <span>{{ 'gogoboard.labdetail_panel.lab1' | translate }}</span><br><br>
+        <span>{{ 'gogoboard.labdetail_panel.' + 'lab1' | translate }}</span><br><br>
+        <p>{{ lab }}</p>
 
         <div class="row">
             <div class="col-sm-12">
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 {{'gogoboard.labdetail_panel.see_detail' | translate}} :
-                <div class="btn btn-micro btn-warning" v-on:click="showText()">
+                <div class="btn btn-micro btn-warning" v-on:click="etr()">
                     {{'gogoboard.labdetail_panel.detail' | translate}}
                 </div>
             </div>
@@ -40,6 +40,9 @@ import vueSlider from 'vue-slider-component'
 import VueSlideBar from 'vue-slide-bar'
 import { setInterval } from 'timers'
 
+//var lab_selected = 99
+var lab
+
 export default {
   name: 'lab-detail-panel',
   components: {
@@ -48,48 +51,29 @@ export default {
   },
   data() {
     return {
-      servoHead: 10,
-    //   servoSliderOption: {
-    //     // eventType: 'auto',
-    //     // width: 'auto',
-    //     // height: 10,
-    //     // dotSize: 16,
-    //     min: 10,
-    //     max: 40
-    //     // interval: 1,
-    //     // show: true,
-    //     // speed: 1,
-    //     // tooltipDir: 'top',
-    //   }
+      message: 'You loaded this page on ',
+      lab: 0
+      //lab: localStorage.getItem("lab_selected")
+
     }
   },
   methods: {
-    setServoHead() {
-      this.doGogoCmdObj({
-        cmd: 'setServoDuty',
-        params: this.servoHead
-      })
-    },
-    ...mapMutations([
-      'doGogoCmdObj' // map `this.doGogoCmd()` to `this.$store.commit('doGogoCmd')`
-    ])
+    etr () {
+      this.$swalDetail({})
+      lab = 40
+      console.log("88")
+    }
   },
   mounted() {
-    setInterval(() => {
-      this.$nextTick(() => {
-        if (this.$refs.servoSlider !== undefined) {
-            this.$refs.servoSlider.refresh()
-        }
-      })
-    }, 500)
+
   },
   updated() {    
-    this.$nextTick(() => this.$refs.servoSlider.refresh())
-    this.setServoHead()
 
   },
   computed: {
-    // ...mapGetters(['gogoControls'])
+    labselected () {
+      return 99
+    }
   }
 }
 </script>

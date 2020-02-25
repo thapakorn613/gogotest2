@@ -61,7 +61,7 @@ export default {
   },
   data() {
     return {
-      servoHead: 10,
+      servoHead: 20,
     //   servoSliderOption: {
     //     // eventType: 'auto',
     //     // width: 'auto',
