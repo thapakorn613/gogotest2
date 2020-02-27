@@ -9,7 +9,8 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "serve": "http-server -p 8080 dist/",
-    "copy-deploy": "rm -rf ../gogo-online-deploy/public/* && cp -a ./dist/. ../gogo-online-deploy/public"
+    "copy-deploy": "rm -rf ../gogo-online-deploy/public/* && cp -a ./dist/. ../gogo-online-deploy/public",
+    "heroku-postbuild" : "babel build.js -d ./dist -s"
   },
   "repository": {
     "type": "git",
