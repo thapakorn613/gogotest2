@@ -31,6 +31,8 @@
 </div>
 </template>
 <script>
+import deviceControl from 'services/deviceControl'
+
 var labNumber = 0
 export default {
   computed: {

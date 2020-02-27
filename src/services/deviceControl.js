@@ -1025,6 +1025,18 @@ export default{
     }
     //client.send(message);
   },
+  mqttreceive ( msg ) {
+    console.log("messege = ",msg)
+    //const Paaho = require('./paho-mqtt')
+    const Paaho = require('./paho-mqtt-new')
+    console.log("MQTTonConnect for receive");
+    var mQtt_ch = localStorage.getItem("mQtt_ch");
+    //client.subscribe("/gogomqtt");
+    //var d = new Date();
+    //var n = d.getMilliseconds();
+    //console.log(d,":",n);
+    //client.send(message);
+  },
 
   virtualgogo ( vByteCode ) {
 
