@@ -1,21 +1,12 @@
 "use strict";
 
-const idlUtils = require("../living/generated/utils");
-
-// Tree traversing
+//Tree traversing
 exports.getFirstChild = function (node) {
   return node.childNodes[0];
 };
 
 exports.getChildNodes = function (node) {
-  // parse5 treats template elements specially, assuming you return an array whose single item is the document fragment
-  const children = node._templateContents ? [node._templateContents] : [];
-  if (children.length === 0) {
-    for (let i = 0; i < node.childNodes.length; ++i) {
-      children.push(idlUtils.implForWrapper(node.childNodes[i]));
-    }
-  }
-  return children;
+  return node.childNodes;
 };
 
 exports.getParentNode = function (node) {
@@ -26,7 +17,7 @@ exports.getAttrList = function (node) {
   return node.attributes;
 };
 
-// Node data
+//Node data
 exports.getTagName = function (element) {
   return element.tagName.toLowerCase();
 };
@@ -55,7 +46,7 @@ exports.getDocumentTypeNodeSystemId = function (doctypeNode) {
   return doctypeNode.systemId || null;
 };
 
-// Node types
+//Node types
 exports.isTextNode = function (node) {
   return node.nodeName === "#text";
 };
@@ -69,5 +60,5 @@ exports.isDocumentTypeNode = function (node) {
 };
 
 exports.isElementNode = function (node) {
-  return Boolean(node.tagName);
+  return !!node.tagName;
 };

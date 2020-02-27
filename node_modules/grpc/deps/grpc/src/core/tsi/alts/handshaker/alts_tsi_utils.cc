@@ -22,8 +22,6 @@
 
 #include <grpc/byte_buffer_reader.h>
 
-#include "src/core/lib/slice/slice_internal.h"
-
 tsi_result alts_tsi_utils_convert_to_tsi_result(grpc_status_code code) {
   switch (code) {
     case GRPC_STATUS_OK:
@@ -49,7 +47,7 @@ grpc_gcp_handshaker_resp* alts_tsi_utils_deserialize_response(
   grpc_slice slice = grpc_byte_buffer_reader_readall(&bbr);
   grpc_gcp_handshaker_resp* resp = grpc_gcp_handshaker_resp_create();
   bool ok = grpc_gcp_handshaker_resp_decode(slice, resp);
-  grpc_slice_unref_internal(slice);
+  grpc_slice_unref(slice);
   grpc_byte_buffer_reader_destroy(&bbr);
   if (!ok) {
     grpc_gcp_handshaker_resp_destroy(resp);

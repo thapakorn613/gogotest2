@@ -49,7 +49,7 @@ struct _xmlBuf {
     size_t use;		        /* The buffer size used */
     size_t size;		/* The buffer size */
     xmlBufferPtr buffer;        /* wrapper for an old buffer */
-    int error;                  /* an error code if a failure occurred */
+    int error;                  /* an error code if a failure occured */
 };
 
 #ifdef WITH_BUFFER_COMPAT
@@ -231,7 +231,7 @@ xmlBufPtr
 xmlBufCreateStatic(void *mem, size_t size) {
     xmlBufPtr ret;
 
-    if (mem == NULL)
+    if ((mem == NULL) || (size == 0))
         return(NULL);
 
     ret = (xmlBufPtr) xmlMalloc(sizeof(xmlBuf));
@@ -701,7 +701,7 @@ xmlBufUse(const xmlBufPtr buf)
  * used in the buffer. It does not account for the terminating zero
  * usually needed
  *
- * Returns the amount or 0 if none or an error occurred
+ * Returns the amount or 0 if none or an error occured
  */
 
 size_t
