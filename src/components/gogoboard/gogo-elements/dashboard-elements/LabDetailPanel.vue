@@ -1,7 +1,7 @@
 <template>
   <div class="lab-detail-panel">
     <div class="row justify-content-center">
-        <span>{{ 'gogoboard.labdetail_panel.' + 'lab' + parentData | translate }}</span><br><br>
+        <span><h3>{{ 'gogoboard.labdetail_panel.' + 'lab' + parentData | translate }}</h3></span><br><br>
 
         <!--<div class="btn btn-micro btn-primary" @click="switchLab(1)" v-on:click="isActive = 1" v-bind:class="{ 'focus': isActive == 1}">
           {{'gogoboard.lab_panel.lab1' | translate}}

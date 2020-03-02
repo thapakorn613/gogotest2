@@ -688,12 +688,17 @@ export default {
     },
     handleDownloadToBoard_reMoteLab () {
       //var mQtt_ch = 'Lab1'
-      //localStorage.setItem("mQtt_ch", mQtt_ch);
-      deviceControl.preCompileVerify(this.getLogoCode(), () => {
-        // this.doGogoCmdObj({cmd: 'logoRun'})
-      })
-      this.saveCacheWorksapce()
-      this.handleSaveForAnalytics()
+      var mQtt_ch = localStorage.getItem("mQtt_ch");
+      console.log(mQtt_ch)
+      if(mQtt_ch != 'defaultchannel'){
+        deviceControl.preCompileVerify(this.getLogoCode(), () => {
+          // this.doGogoCmdObj({cmd: 'logoRun'})
+        })
+        this.saveCacheWorksapce()
+        this.handleSaveForAnalytics()
+      }else{
+        this.$swalNotSelect({})
+      }
     },
     handleDownloadToBoard () {
       deviceControl.preCompileVerify(this.getLogoCode(), () => {
