@@ -17,15 +17,22 @@
           <div class="col-sm-12 text-right" style="background-color:white;">
             <p>{{ 'gogoboard.labstatus_panel.internet' | translate }} :</p>
           </div>
+          <div class="col-sm-12 text-right" style="background-color:white;">
+            <p>{{ 'Battery' }} :</p>
+          </div>
         </div></h5>
       </div>
       <div class="col-sm-6 text-left" style="background-color:white;"><p>{{ parentData2 || 'unknown'}}</p>
         <div class="row">
           <div class="col-sm-12 text-left">
-            <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
+            <p>{{ 'READY' }}</p>
+          </div>
+          <div class="col-sm-12 text-left">
+            <p>{{ 'READY' }}</p>
           </div>
         </div>
       </div>
+      
 
       <!--<div class="col-sm-4 text-right">
         <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>

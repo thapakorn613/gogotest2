@@ -8,39 +8,39 @@
       :cancelClass="'none'" :cancelText="'modal.cancel' | translate"
       :headerBgColor="'#3298a8'"
       >
-      <div slot="title"><i class="fa fa-warning"></i> {{'plugin.noplugin_header' | translate}}</div>
-      <div class="row justify-content-center">
-        <img src="/static/gogo-img/demo-carControl.png">
-      </div>
+      <div slot="title"><i class="fa fa-car"></i> {{'gogoboard.labdetail_panel.lab' + isLab| translate}}</div>
 
-      <div class="row space justify-content-center text-center">
-        <h5>
-        {{'plugin.long_desc' | translate }}
-        <br><br>
-        {{'plugin.long_desc_2nd' | translate }}
-        </h5>
-      </div>
+      <!--<div class="row justify-content-left">
+        <img src="/static/gogo-img/demo-carControl.png" width="100" height="110">
+      </div>-->
+
+        <div class="row">
+            <div class="col-sm-3 text-right" style="background-color:lightcyan;"><h5>
+                <img src="/static/gogo-img/demo-carControl.png" width="150" height="160"></h5>
+            </div>
+            <div class="col-sm-3 text-right space" style="background-color:lightcyan;"><h5><p>{{ 'gogoboard.labdetail_panel.lab1_detail.head' | translate}} :</p></h5></div>
+            <div class="col-sm-6 space" style="background-color:lavender;"><h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.head1' | translate}}</p></h6></div>
+            <div class="col-sm-6 text-right space" style="background-color:lightcyan;"><h5><p>{{ 'gogoboard.labdetail_panel.lab1_detail.tool' | translate}} :</p></h5></div>
+            <div class="col-sm-6 space" style="background-color:lavender;"><h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.tool1' | translate}}<br>
+            {{ 'gogoboard.labdetail_panel.lab1_detail.tool2' | translate}}</p></h6></div>
+
+            <!--<div class="col-lg-2 text-left" style="background-color:green;"><h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.head' | translate}} :</p></h6>
+                <div class="row">
+                <div class="col-sm-12 text-left" style="background-color:blue;">
+                    <h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.tool' | translate}} :</p></h6>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 text-left" style="background-color:white;"><h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.head1' | translate}}</p></h6>
+                <div class="row">
+                <div class="col-sm-12 text-left">
+                    <h6><p>{{ 'gogoboard.labdetail_panel.lab1_detail.tool1' | translate}}</p></h6>
+                </div>
+                </div>
+            </div>-->
+        </div>
 
       <hr width="50%">
-
-      <div class="row justify-content-center">
-        <h6>{{'plugin.download' | translate }} </h6>
-      </div>
-
-      <div class="row space d-flex justify-content-center text-center">
-        <div class="block mac">
-          <a :href="macUrl">
-            <i class="fa fa-4x fa-apple"></i>
-            <p class="btn-label">macOS</p>
-          </a>
-        </div>
-        <div class="block windows">
-          <a :href="winUrl">
-            <i class="fa fa-4x fa-windows"></i>
-            <p class="btn-label">Windows</p>
-          </a>
-        </div>
-      </div>
       
     </vuestic-modal>
   </div>
@@ -100,6 +100,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.spacehead {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
 .space {
   padding-top: 20px;
   padding-bottom: 20px;

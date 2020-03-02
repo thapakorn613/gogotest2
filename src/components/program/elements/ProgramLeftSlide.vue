@@ -8,9 +8,9 @@
     </vuestic-widget>
 
     <vuestic-widget class="chat-widget lab-widget" 
-        :icon="'fa fa-gamepad'"
+        :icon="'fa fa-youtube-play'"
         :headerBgColor="'#4287f5'" :headerTextColor="'#fff0dc'"
-        :headerText="$t('gogoboard.headers.labs')">
+        :headerText="$t('gogoboard.headers.videos')">
         <lab-panel :irValue="gogo.irValue"></lab-panel>
     </vuestic-widget>
 

@@ -49,7 +49,7 @@
       <div class="lab-area">
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
-          v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
+          v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(2)" @click="isSelect = 2">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon lab-icon-1 icon-lab-2 fa-stack-1x "></i>
