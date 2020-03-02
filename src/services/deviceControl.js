@@ -4,6 +4,7 @@ import { CONST, CONFIG } from './const'
 import notification from './notification'
 import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 
+
 // import Noty from 'noty'
 
 // var deviceProcess = require('./deviceProcess')
@@ -49,6 +50,7 @@ var countVMpro = 0;
 var ss = localStorage.getItem("sensor_val"); // sensor value
 //const Paaho = require('./paho-mqtt')
 const Paaho = require('./paho-mqtt-new')
+var randomstring = require("randomstring");
 
 const vm = {
   WAIT: 16,
@@ -960,15 +962,15 @@ export default{
     const Paaho = require('./paho-mqtt-new')
     //client = new Paaho.Paho.MQTT.Client("soldier.cloudmqtt.com", /*30420*/34222,"bank99");
     //client = new Paaho.Paho.MQTT.Client("smart-teacher.cloudmqtt.com", /*30420*/443,"bank99");
-    client = new Paaho.Paho.MQTT.Client("35.198.231.150", 9001,"RUNBKK");
+    client = new Paaho.Paho.MQTT.Client("35.198.231.150", 9001,randomstring.generate(7));
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
     var options = {
       useSSL: true,
       //userName: "vpfewsse",
       //password: "gNAs763mxcGN",
-      userName: "obpkkwdc",
-      password: "1lUnSF15XpWM",
+      //userName: "obpkkwdc",
+      //password: "1lUnSF15XpWM",
       //userName: "ekrwnxjf",
       //password: "x9OU_vaUyZQJ",
       onSuccess:onConnect,
@@ -1023,6 +1025,18 @@ export default{
       //console.log("loopmsg",msg[i]);
       client.send(message);
     }
+    //client.send(message);
+  },
+  mqttreceive ( msg ) {
+    console.log("messege = ",msg)
+    //const Paaho = require('./paho-mqtt')
+    const Paaho = require('./paho-mqtt-new')
+    console.log("MQTTonConnect for receive");
+    var mQtt_ch = localStorage.getItem("mQtt_ch");
+    //client.subscribe("/gogomqtt");
+    //var d = new Date();
+    //var n = d.getMilliseconds();
+    //console.log(d,":",n);
     //client.send(message);
   },
 

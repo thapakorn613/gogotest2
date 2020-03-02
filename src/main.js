@@ -153,7 +153,8 @@ Object.defineProperties(Vue.prototype, {
     get () {
       return this.$swal.mixin({
         title: this.$t('gogoboard.labdetail_panel.lab1'),
-        text: this.$t('gogoboard.labdetail_panel.see_detail'),
+        text: this.$t('gogoboard.labdetail_panel.lab1_detail.head'),
+        // text: this.$t('gogoboard.labdetail_panel.sub_head'),
         // type: 'warning',
         showCancelButton: false,
         confirmButtonColor: '#b0e049',
@@ -169,7 +170,7 @@ Object.defineProperties(Vue.prototype, {
     get () {
       return this.$swal.mixin({
         title: this.$t('gogoboard.labdetail_panel.lab2'),
-        text: this.$t('gogoboard.labdetail_panel.see_detail'),
+        text: this.$t('gogoboard.labdetail_panel.lab2_detail.head'),
         // type: 'warning',
         showCancelButton: false,
         confirmButtonColor: '#b0e049',
