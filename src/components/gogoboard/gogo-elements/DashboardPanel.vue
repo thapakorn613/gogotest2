@@ -5,7 +5,7 @@
     <!--<LabDisplayPanel :parentData="myData" v-on:childToParent="onChildClick"></LabDisplayPanel>-->
     <vue-tabs>
       <v-tab :title="$t('gogoboard.tabs.lab_detail')">
-        <lab-detail-panel :parentData="fromChild" v-on:detailToStatus="onUserEnter"></lab-detail-panel>
+        <lab-detail-panel :parentData="fromChild" v-on:detailToStatus="onUserEnter" v-on:detailToStatuss="onCallDetail"></lab-detail-panel>
       </v-tab>
 
       <!--<v-tab :title="$t('gogoboard.tabs.lab_test')">
@@ -16,7 +16,7 @@
       <v-tab :title="$t('gogoboard.tabs.lab_status')">
         <lab-status-panel :parentData="fromChild" :parentData2="fromDetail" ></lab-status-panel>
       </v-tab>
-  </vue-tabs>
+    </vue-tabs>
 
     <!-- <div class="row">
       <div class="col-sm-12">
@@ -42,6 +42,7 @@ import LabDisplayPanel from './dashboard-elements/LabDisplayPanel.vue'
 import LabDetailPanel from './dashboard-elements/LabDetailPanel.vue'
 import LabStatusPanel from './dashboard-elements/LabStatusPanel.vue'
 import ServoControlPanel from './motor-elements/ServoControlPanel.vue'
+import HeaderDetail from './dashboard-elements/HeaderDetail'
 
 import 'vue-nav-tabs/themes/paper.css'
 
@@ -52,6 +53,7 @@ export default {
     LabDisplayPanel,
     LabDetailPanel,
     LabStatusPanel,
+    HeaderDetail,
     ServoControlPanel,
     VueTabs,
     VTab
@@ -60,8 +62,9 @@ export default {
     return {
       A: 10,
       counter: 0,
-      fromChild: '',
+      fromChild: '1',
       fromDetail: '', // This value is set to the value emitted by the child
+      toSeeDetail: '',
     }
   },
   methods: {
@@ -71,6 +74,10 @@ export default {
     },
     onUserEnter (value) {
       this.fromDetail = value
+      console.log(value)
+    },
+    onCallDetail (value) {
+      this.toSeeDetail = value
       console.log(value)
     }
   },

@@ -86,8 +86,8 @@
     },
     "lab_panel": {
       "lab1": "Lab 1 : Car control",
-      "lab2": "Lab 2 : Smart farm",
-      "lab3": "Lab 3 : Maze runner"
+      "lab2": "Lab 2 : Light control",
+      "lab3": "Lab 3 : Balancing"
     },
     "dashboard_panel": {
       "lab1": "Lab 1 : Car control"
@@ -103,8 +103,8 @@
     "labdetail_panel": {
       "lab": "Lab 1 : Car control",
       "lab1": "Lab 1 : Car control",
-      "lab2": "Lab 2 : Smart farm",
-      "lab3": "Lab 3 : Maze runner",
+      "lab2": "Lab 2 : Light control",
+      "lab3": "Lab 3 : Balancing",
 
       "name": "Name or Username",
       "enter": "Enter",
@@ -113,7 +113,7 @@
       "head": "Detail",
       "sub_head": "tools",
       "lab1_detail": {
-        "head": "remote Car เป็นแบบทดสอบและกิจกรรมพัฒนาผู้เรียนที่จะทำให้ผู้เรียนได้ฝึกการเขียนโปรแกรมเพื่อควบคุมสมองกลฝังตัวให้บังคับชุดรถบังคับ โดยรับอินพุตจากเซ็นเซอร์ปุ่มกด และมีเอาต์พุตเป็นมอเตอร์ 2 ตัว ให้เคลื่อนที่ไปตามทิศทางที่ถูกต้อง",
+        "head": "Remote Car เป็นแบบทดสอบและกิจกรรมพัฒนาผู้เรียนที่จะทำให้ผู้เรียนได้ฝึกการเขียนโปรแกรมเพื่อควบคุมสมองกลฝังตัวให้บังคับชุดรถบังคับ โดยรับอินพุตจากเซ็นเซอร์ปุ่มกด และมีเอาต์พุตเป็นมอเตอร์ 2 ตัว ให้เคลื่อนที่<br>ไปตามทิศทางที่ถูกต้อง",
         "tool1": "1. Gogoboard ",
         "tool2": "เซนเซอร์ปุ่มกด"
       },

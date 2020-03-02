@@ -168,7 +168,12 @@ Object.defineProperties(Vue.prototype, {
     get () {
       return this.$swal.mixin({
         title: this.$t('gogoboard.labdetail_panel.lab1'),
-        text: this.$t('gogoboard.labdetail_panel.lab1_detail.head'),
+        width: 600,
+        // text: this.$t('gogoboard.labdetail_panel.lab1_detail.head'),
+        html: this.$t('gogoboard.labdetail_panel.lab1_detail.head'),
+        imageUrl: '/static/gogo-img/demo-carControl.png',
+        imageWidth: 240,
+        imageHeight: 200,
         // text: this.$t('gogoboard.labdetail_panel.sub_head'),
         // type: 'warning',
         showCancelButton: false,
