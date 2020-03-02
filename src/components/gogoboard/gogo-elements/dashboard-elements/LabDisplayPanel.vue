@@ -28,7 +28,7 @@
           v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(1)" @click="isSelect = 1" >
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
-          <i class="lab-icon fa fa-car lab-icon-1 fa-stack-1x "></i>
+          <i class="lab-icon lab-icon-1 icon-lab-1 fa-stack-1x "></i>
           <i class="lab-select fa fa-stack-2x"
             v-bind:class="[ isSelect == 1 ? 'fa-circle-o-notch fa-spin' : '' ]"></i>
           <!--<i class="fa fa-circle-o-notch fa-spin fa-stack-2x"></i>-->
@@ -37,7 +37,10 @@
             false ? 'fa-ban' : '',// ban and unban
             false ? 'lab-ban-active' : 'lab-ban-inactive', // true or false ? true : false
             ]"></i>
+          <!--<img src="/static/gogo-img/remote.png" width="70" height="22">-->
+
         </a>
+        <!--<i class="icon-play"></i>-->
         <div class="row justify-content-center">
           <span>{{ 'gogoboard.labdisplay_panel.lab1' | translate }}</span>
         </div>
@@ -46,10 +49,10 @@
       <div class="lab-area">
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
-          v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
+          v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(2)" @click="isSelect = 2">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
-          <i class="lab-icon fa fa-tree lab-icon-1 fa-stack-1x "></i>
+          <i class="lab-icon lab-icon-1 icon-lab-2 fa-stack-1x "></i>
           <i class="lab-select fa fa-stack-2x"
             v-bind:class="[ isSelect == 2 ? 'fa-circle-o-notch fa-spin' : '' ]"></i>
           <i class="lab-ban fa fa-stack-2x"
@@ -69,7 +72,7 @@
           v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(3)">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
-          <i class="lab-icon fa fa-arrows lab-icon-1 fa-stack-1x "></i>
+          <i class="lab-icon lab-icon-1 icon-lab-3 fa-stack-1x "></i>
           <i class="lab-ban fa fa-stack-2x"
             v-bind:class="[
             true ? 'fa-ban' : '',// ban and unban
@@ -195,6 +198,21 @@ export default {
 
 .lab-icon-1 {
   color: #000000;
+}
+
+.icon-lab-1{
+  background-image : url("/static/gogo-img/demo-carControl-black.png");
+  background-size: cover;
+}
+
+.icon-lab-2{
+  background-image : url("/static/gogo-img/demo-lightControl-black.png");
+  background-size: cover;
+}
+
+.icon-lab-3{
+  background-image : url("/static/gogo-img/demo-balancing-black.png");
+  background-size: cover;
 }
 
 .motor-inactive {

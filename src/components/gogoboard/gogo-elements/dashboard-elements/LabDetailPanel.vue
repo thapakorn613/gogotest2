@@ -32,13 +32,14 @@
         <div class="row">
             <div class="col-sm-12 text-center">
                 {{'gogoboard.labdetail_panel.see_detail' | translate}} :
-                <div class="btn btn-micro btn-warning"  @click="etr()">
+                <div class="btn btn-micro btn-warning"  @click="etr()" v-on:click="callDetail()">
                     {{'gogoboard.labdetail_panel.detail' | translate}}
                 </div>
             </div>
         </div>
 
     </div>
+    <header-detail :isOpen="openDetail" :isLab="lab"></header-detail>
   </div>
 </template>
 
@@ -48,6 +49,7 @@ import vueSlider from 'vue-slider-component'
 import VueSlideBar from 'vue-slide-bar'
 import { setInterval } from 'timers'
 import LabDisplayPanel from './LabDisplayPanel.vue'
+import HeaderDetail from './HeaderDetail'
 
 //var lab_selected = 99
 //var lab
@@ -58,7 +60,8 @@ export default {
   components: {
     vueSlider,
     VueSlideBar,
-    LabDisplayPanel
+    LabDisplayPanel,
+    HeaderDetail
   },
   data() {
     return {
@@ -67,27 +70,32 @@ export default {
       userName : '',
       form: {
         name: ''
-      }
+      },
+      openDetail: false,
       //lab: localStorage.getItem("lab_selected")
 
     }
   },
   methods: {
     etr () {
-      if(this.parentData == 1){
-        this.$swalDetail1({})
+      /*if(this.parentData == 1){
+        this.openDetail = !this.openDetail
       }else if(this.parentData == 2){
         this.$swalDetail2({})
       }else if(this.parentData == 3){
         this.$swalDetail3({})
       }else{
         this.$swalDetail1({})
-      }
-      this.lab = 0
-      console.log(this.lab)
+      }*/
+      this.openDetail = !this.openDetail
     },
     enterUsername (event) {
       this.$emit('detailToStatus', this.userName)
+    },
+    callDetail (event) {
+      this.lab = this.parentData
+      this.$emit('detailToStatuss', this.parentData)
+      console.log(this.parentData)
     }
   },
   mounted() {
