@@ -1,7 +1,7 @@
 <template>
   <div class="lab-status-panel">
     <div class="row justify-content-center">
-        <span>{{ 'gogoboard.labdetail_panel.' + 'lab' + parentData | translate }}</span>
+        <span><h2>{{ 'gogoboard.labdetail_panel.' + 'lab' + parentData | translate }}</h2></span>
 
         <!--<div class="row">
             <div class="col-sm-6 text-center">
@@ -11,16 +11,17 @@
 
     </div>
     <div class="row">
-      <div class="col-sm-6 text-center" style="background-color:yellow;"><p>Name : {{ parentData2 }} </p>
+      <div class="col-sm-6 text-right" style="background-color:white;"><h5>
+        <p>{{ 'gogoboard.labstatus_panel.name' | translate }} :</p>
         <div class="row">
-          <div class="col-sm-12 text-center" style="background-color:red;">
-            <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
+          <div class="col-sm-12 text-right" style="background-color:white;">
+            <p>{{ 'gogoboard.labstatus_panel.internet' | translate }} :</p>
           </div>
-        </div>
+        </div></h5>
       </div>
-      <div class="col-sm-6 text-center" style="background-color:red;"><p>Name : {{ parentData2 }} </p>
+      <div class="col-sm-6 text-left" style="background-color:white;"><p>{{ parentData2 || 'unknown'}}</p>
         <div class="row">
-          <div class="col-sm-12 text-center">
+          <div class="col-sm-12 text-left">
             <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
           </div>
         </div>

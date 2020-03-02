@@ -149,6 +149,21 @@ Object.defineProperties(Vue.prototype, {
       })
     }
   },
+  $swalNotSelect: {
+    get () {
+      return this.$swal.mixin({
+        title: this.$t('gogoboard.labdisplay_panel.notselect'),
+        type: 'warning',
+        showCancelButton: false,
+        confirmButtonColor: '#b0e049',
+        cancelButtonColor: '#e34a4a',
+        confirmButtonClass: 'sweet-aleart-button-class',
+        cancelButtonClass: 'sweet-aleart-button-class',
+        confirmButtonText: this.$t('global.warning_confirm.yes'),
+        cancelButtonText: this.$t('global.warning_confirm.cancel'),
+      })
+    }
+  },
   $swalDetail1: {
     get () {
       return this.$swal.mixin({

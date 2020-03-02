@@ -93,6 +93,9 @@
       "lab1": "Lab 1 : Car control"
     },
     "labdisplay_panel": {
+      "notselect": "Please select lab",
+
+
       "lab1": "Lab 1",
       "lab2": "Lab 2",
       "lab3": "Lab 3"
@@ -121,6 +124,7 @@
       }
     },
     "labstatus_panel":{
+      "name":"Name",
       "internet": "Internet"
     },
     "motor": {

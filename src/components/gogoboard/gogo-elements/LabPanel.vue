@@ -2,30 +2,15 @@
 <div class="lab-panel">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <fieldset>
-          <div class="btn btn-micro btn-primary" @click="switchLab(1)" v-on:click="isActive = 1" v-bind:class="{ 'focus': isActive == 1}">
-            {{'gogoboard.lab_panel.lab1' | translate}}
-          </div>
-          <div class="btn btn-micro btn-primary" @click="switchLab(2)" v-on:click="isActive = 2" v-bind:class="{ 'focus': isActive == 2}">
-            {{'gogoboard.lab_panel.lab2' | translate}}
-          </div>
-          <div class="btn btn-micro btn-primary" @click="switchLab(3)" v-on:click="isActive = 3" v-bind:class="{ 'focus': isActive == 3}">
-            {{'gogoboard.lab_panel.lab3' | translate}}
-          </div>
-          <!-- ******** Show only large Screen ********
-          <div class="btn-toolbar d-none " role="toolbar"
-            v-bind:class="{ 'd-lg-inline-flex': !isShowWidget, 'd-xl-inline-flex': isShowWidget }">
-            <div class="btn-group btn-pale group-undo-redo" role="group" aria-label="First group">
-              <button @click="switchLab(1)" type="button" class="btn btn-primary btn-micro" v-bind:class="{ 'focus': isActive }">
-                <i class="fa fa-puzzle-piece"></i> Blocks
-              </button>
-              <button @click="switchLab(2)" type="button" class="btn btn-primary btn-micro" v-bind:class="{ 'focus': isActive }">
-                <i class="fa fa-code"></i> Logo Code
-              </button>
-            </div>
-          </div>
-          ******************** -->
-        </fieldset>
+        <div class="btn btn-micro btn-primary col-sm-12" @click="switchLab(1)" v-on:click="isActive = 1" v-bind:class="{ 'focus': isActive == 1}">
+          {{'gogoboard.lab_panel.lab1' | translate}}
+        </div>
+        <div class="btn btn-micro btn-primary col-sm-12 top-buffer" @click="switchLab(2)" v-on:click="isActive = 2" v-bind:class="{ 'focus': isActive == 2}">
+          {{'gogoboard.lab_panel.lab2' | translate}}
+        </div>
+        <div class="btn btn-micro btn-primary col-sm-12 top-buffer" @click="switchLab(3)" v-on:click="isActive = 3" v-bind:class="{ 'focus': isActive == 3}">
+          {{'gogoboard.lab_panel.lab3' | translate}}
+        </div>
       </div>
     </div>
 </div>
@@ -64,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.top-buffer { 
+  margin-top:8px;
+}
+</style>
