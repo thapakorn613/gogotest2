@@ -2,28 +2,33 @@
   <div class="lab-status-panel">
     <div class="row justify-content-center">
         <span>{{ 'gogoboard.labdetail_panel.' + 'lab' + parentData | translate }}</span>
-        
-        <!--<div class="btn btn-micro btn-primary" @click="switchLab(1)" v-on:click="isActive = 1" v-bind:class="{ 'focus': isActive == 1}">
-          {{'gogoboard.lab_panel.lab1' | translate}}
+
+        <!--<div class="row">
+            <div class="col-sm-6 text-center">
+              <p>Name : {{ parentData2 }} </p>
+            </div>
         </div>-->
-        <!--<div v-if="lab == 0">
-          A
-        </div>-->
 
-
-
+    </div>
+    <div class="row">
+      <div class="col-sm-6 text-center" style="background-color:yellow;"><p>Name : {{ parentData2 }} </p>
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <p>Name : {{ parentData2 }} </p>
-            </div>
-            <div class="col-sm-12 text-center">
-                {{'gogoboard.labdetail_panel.see_detail' | translate}} :
-                <div class="btn btn-micro btn-warning"  @click="etr()">
-                    {{'gogoboard.labdetail_panel.detail' | translate}}
-                </div>
-            </div>
+          <div class="col-sm-12 text-center" style="background-color:red;">
+            <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
+          </div>
         </div>
+      </div>
+      <div class="col-sm-6 text-center" style="background-color:red;"><p>Name : {{ parentData2 }} </p>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
+          </div>
+        </div>
+      </div>
 
+      <!--<div class="col-sm-4 text-right">
+        <p>{{ 'gogoboard.labstatus_panel.internet' | translate }}</p>
+      </div>-->
     </div>
   </div>
 </template>

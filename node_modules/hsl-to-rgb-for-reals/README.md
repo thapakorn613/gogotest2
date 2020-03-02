@@ -1,9 +1,9 @@
 # hsl-to-rgb-for-reals
 
 ##HSL -> RGB
-Convert HSL values (hue, saturation, light) to RGB values (red, blue, green). 
+Convert HSL values (hue, saturation, light) to RGB values (red, green, blue). 
 Expected values:
-Hue: [0, 360)
+Hue: [0, 360[
 Saturation: [0, 1]
 Lightness: [0, 1]
 
@@ -28,7 +28,7 @@ var converter = require('hsl-to-rgb-for-reals');
 var slateBlue = converter(223, 0.44, 0.56);
 
 console.log(slateBlue);
-// logs [86, 115, 189]
+// logs [93, 121, 192]
 ```
 
 

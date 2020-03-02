@@ -157,7 +157,7 @@
 #define HAVE_RAND 1
 
 /* Define to 1 if you have the `rand_r' function. */
-#ifndef WIN32
+#ifndef _WIN32
 #define HAVE_RAND_R 1
 #endif
 
@@ -172,6 +172,11 @@
 
 /* Define to 1 if you have the <signal.h> header file. */
 #define HAVE_SIGNAL_H 1
+
+/* snprintf macro for older MSVS versions */
+#if defined(_WIN32) && _MSC_VER < 1900
+#define snprintf _snprintf
+#endif
 
 /* Define to 1 if you have the `snprintf' function. */
 #define HAVE_SNPRINTF 1
@@ -251,7 +256,7 @@
 #define HAVE_TIME_H 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
-#ifndef WIN32
+#ifndef _WIN32
 #define HAVE_UNISTD_H 1
 #endif
 
@@ -277,7 +282,7 @@
 /* #undef HAVE___VA_COPY */
 
 /* Define as const if the declaration of iconv() needs const. */
-#define ICONV_CONST 
+#define ICONV_CONST
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"

@@ -120,6 +120,9 @@
         "tool2": "เซนเซอร์ปุ่มกด"
       }
     },
+    "labstatus_panel":{
+      "internet": "Internet"
+    },
     "motor": {
       "slect_motor_port": "Select Motor Port(s)",
       "click_to_select": "Click to select port",

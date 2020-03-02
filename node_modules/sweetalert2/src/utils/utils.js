@@ -20,7 +20,7 @@ export const uniqueArray = (arr) => {
  */
 export const toArray = (nodeList) => Array.prototype.slice.call(nodeList)
 
-  /**
+/**
  * Converts `inputOptions` into an array of `[value, label]`s
  * @param inputOptions
  */
@@ -79,4 +79,4 @@ export const warnOnce = (message) => {
  */
 export const callIfFunction = (arg) => typeof arg === 'function' ? arg() : arg
 
-export const isThenable = (arg) => typeof arg === 'object' && typeof arg.then === 'function'
+export const isPromise = (arg) => arg && Promise.resolve(arg) === arg
