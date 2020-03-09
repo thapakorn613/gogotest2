@@ -54,7 +54,7 @@ CodeMirror.registerHelper("fold", "brace", function(cm, start) {
       ++pos;
     }
   }
-  if (end == null || line == end) return;
+  if (end == null || line == end && endCh == startCh) return;
   return {from: CodeMirror.Pos(line, startCh),
           to: CodeMirror.Pos(end, endCh)};
 });

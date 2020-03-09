@@ -1,21 +1,24 @@
 "use strict";
-const addConstants = require("../utils").addConstants;
-const table = require("./dom-exception-table.json"); // https://heycam.github.io/webidl/#idl-DOMException-error-names
+var inheritFrom = require("../utils").inheritFrom;
+var addConstants = require("../utils").addConstants;
+var table = require("./dom-exception-table.json"); // https://heycam.github.io/webidl/#idl-DOMException-error-names
 
 // Precompute some stuff. Mostly unnecessary once we take care of the TODO below.
-const namesWithCodes = Object.keys(table).filter(name => "legacyCodeValue" in table[name]);
+var namesWithCodes = Object.keys(table).filter(function (name) {
+  return "legacyCodeValue" in table[name];
+});
 
-const codesToNames = Object.create(null);
-for (const name of namesWithCodes) {
+var codesToNames = Object.create(null);
+namesWithCodes.forEach(function (name) {
   codesToNames[table[name].legacyCodeValue] = name;
-}
+});
 
 module.exports = DOMException;
 
 // TODO: update constructor signature to match WebIDL spec
 // See also https://github.com/heycam/webidl/pull/22 which isn't merged as of yet
 function DOMException(code, message) {
-  const name = codesToNames[code];
+  var name = codesToNames[code];
 
   if (message === undefined) {
     message = table[name].description;
@@ -30,12 +33,11 @@ function DOMException(code, message) {
   }
 }
 
-Object.setPrototypeOf(DOMException, Error);
-Object.setPrototypeOf(DOMException.prototype, Error.prototype);
+inheritFrom(Error, DOMException);
 
-const constants = Object.create(null);
-for (const name of namesWithCodes) {
+var constants = Object.create(null);
+namesWithCodes.forEach(function (name) {
   constants[table[name].legacyCodeName] = table[name].legacyCodeValue;
-}
+});
 
 addConstants(DOMException, constants);

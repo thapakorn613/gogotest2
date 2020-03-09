@@ -31,11 +31,9 @@
 #include "src/core/lib/transport/static_metadata.h"
 
 typedef struct grpc_linked_mdelem {
-  grpc_linked_mdelem() {}
-
   grpc_mdelem md;
-  struct grpc_linked_mdelem* next = nullptr;
-  struct grpc_linked_mdelem* prev = nullptr;
+  struct grpc_linked_mdelem* next;
+  struct grpc_linked_mdelem* prev;
   void* reserved;
 } grpc_linked_mdelem;
 
@@ -74,7 +72,7 @@ grpc_error* grpc_metadata_batch_substitute(grpc_metadata_batch* batch,
                                            grpc_mdelem new_value);
 
 void grpc_metadata_batch_set_value(grpc_linked_mdelem* storage,
-                                   const grpc_slice& value);
+                                   grpc_slice value);
 
 /** Add \a storage to the beginning of \a batch. storage->md is
     assumed to be valid.
@@ -84,7 +82,6 @@ void grpc_metadata_batch_set_value(grpc_linked_mdelem* storage,
 grpc_error* grpc_metadata_batch_link_head(grpc_metadata_batch* batch,
                                           grpc_linked_mdelem* storage)
     GRPC_MUST_USE_RESULT;
-
 /** Add \a storage to the end of \a batch. storage->md is
     assumed to be valid.
     \a storage is owned by the caller and must survive for the
@@ -103,7 +100,6 @@ grpc_error* grpc_metadata_batch_link_tail(grpc_metadata_batch* batch,
 grpc_error* grpc_metadata_batch_add_head(
     grpc_metadata_batch* batch, grpc_linked_mdelem* storage,
     grpc_mdelem elem_to_add) GRPC_MUST_USE_RESULT;
-
 /** Add \a elem_to_add as the last element in \a batch, using
     \a storage as backing storage for the linked list element.
     \a storage is owned by the caller and must survive for the

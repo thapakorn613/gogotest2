@@ -1,6 +1,5 @@
 "use strict";
 const lengthFromProperties = require("../utils").lengthFromProperties;
-const idlUtils = require("./generated/utils");
 
 const privates = Symbol("NodeList internal slots");
 
@@ -64,8 +63,7 @@ function resetNodeListTo(nodeList, nodes) {
   }
 
   for (let i = 0; i < nodes.length; ++i) {
-    const wrapper = idlUtils.wrapperForImpl(nodes[i]);
-    nodeList[i] = wrapper ? wrapper : nodes[i];
+    nodeList[i] = nodes[i];
   }
   nodeList[privates].length = nodes.length;
 }

@@ -48,19 +48,13 @@ class GrpcLbClientStats : public RefCounted<GrpcLbClientStats> {
                        bool finished_known_received);
 
   // This method is not thread-safe; caller must synchronize.
-  void AddCallDroppedLocked(const char* token);
+  void AddCallDroppedLocked(char* token);
 
   // This method is not thread-safe; caller must synchronize.
   void GetLocked(int64_t* num_calls_started, int64_t* num_calls_finished,
                  int64_t* num_calls_finished_with_client_failed_to_send,
                  int64_t* num_calls_finished_known_received,
                  UniquePtr<DroppedCallCounts>* drop_token_counts);
-
-  // A destruction function to use as the user_data key when attaching
-  // client stats to a grpc_mdelem.
-  static void Destroy(void* arg) {
-    static_cast<GrpcLbClientStats*>(arg)->Unref();
-  }
 
  private:
   // This field must only be accessed via *_locked() methods.
