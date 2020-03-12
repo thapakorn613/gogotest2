@@ -11,6 +11,7 @@
 #include "xml_comment.h"
 #include "xml_text.h"
 #include "xml_attribute.h"
+#include "xml_pi.h"
 
 namespace libxmljs {
 
@@ -76,7 +77,7 @@ NAN_METHOD(XmlNode::Namespace) {
       // will create a new namespace attached to this node
       // since we keep the document around, the namespace, like the node, won't be
       // garbage collected
-      v8::Local<v8::Value> new_ns = define_namespace->NewInstance(argc, argv);
+      v8::Local<v8::Value> new_ns = Nan::NewInstance(define_namespace, argc, argv).ToLocalChecked();
       ns = Nan::ObjectWrap::Unwrap<XmlNamespace>(new_ns->ToObject());
   }
 
@@ -781,6 +782,7 @@ XmlNode::Initialize(v8::Handle<v8::Object> target) {
   XmlElement::Initialize(target);
   XmlText::Initialize(target);
   XmlComment::Initialize(target);
+  XmlProcessingInstruction::Initialize(target);
   XmlAttribute::Initialize(target);
 }
 }  // namespace libxmljs

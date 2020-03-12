@@ -3,6 +3,7 @@ import { CONST, CONFIG } from './const'
 
 import notification from './notification'
 import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+import PahoMQTT from 'paho-mqtt'
 
 
 // import Noty from 'noty'
@@ -24,7 +25,7 @@ var cmdList = [];
 var imm1byte = [];
 var boolCompare =[];
 var newCmd = true;
-var valueSensor1 ;
+var valuesensor ;
 var sensorStackForIf = [];
 var gblBuffer1 = [];
 var gblBuffer2 = [];
@@ -49,8 +50,12 @@ var countVMpro = 0;
 
 var ss = localStorage.getItem("sensor_val"); // sensor value
 //const Paaho = require('./paho-mqtt')
-const Paaho = require('./paho-mqtt-new')
+//var PahoMQTT = require('./paho-mqtt-new')
 var randomstring = require("randomstring");
+
+global.Paho = {
+  MQTT: PahoMQTT
+}
 
 const vm = {
   WAIT: 16,
@@ -958,11 +963,11 @@ export default{
   mqttconnect(){
     console.log("ss",ss)
     console.log("messege = mqttconnectfunction")
-    //const Paaho = require('./paho-mqtt')
-    const Paaho = require('./paho-mqtt-new')
+    //Paaho = require('./paho-mqtt-new')
     //client = new Paaho.Paho.MQTT.Client("soldier.cloudmqtt.com", /*30420*/34222,"bank99");
     //client = new Paaho.Paho.MQTT.Client("smart-teacher.cloudmqtt.com", /*30420*/443,"bank99");
-    client = new Paaho.Paho.MQTT.Client("35.198.231.150", 9001,randomstring.generate(7));
+    //client = new Paaho.Paho.MQTT.Client("35.198.231.150", 9001,randomstring.generate(7));
+    client = new Paho.MQTT.Client("35.198.231.150", 9001,randomstring.generate(7));
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
     var options = {
@@ -978,49 +983,40 @@ export default{
     }
     client.connect(options);
     function onConnect() {
-        console.log("MQTTonConnect");
-        var message = new Paaho.Paho.MQTT.Message("reQconnect");
-        var mQtt_ch = localStorage.getItem("mQtt_ch");
-        message.destinationName = "remotelab/"+mQtt_ch;
-        console.log(mQtt_ch);
-        client.send(message);
-        //client.subscribe("/gogomqtt");
-        /*for(var i=0;i<msg.length;i++){
-          var message = new Paaho.Paho.MQTT.Message(msg[i]);
-          message.destinationName = "remotelab";
-          console.log("loopmsg",msg[i]);
-          client.send(message);
-        }
-        client.send(message);*/
+      console.log("MQTTonConnect");
+      var message = new Paho.MQTT.Message("reQconnect");
+      var mQtt_ch = localStorage.getItem("mQtt_ch");
+      message.destinationName = "remotelab/"+mQtt_ch;
+      console.log(mQtt_ch);
+      client.send(message);
+      client.subscribe("remotelab/"+mQtt_ch);
     }
     function doFail(e){
-        console.log(e);
+      console.log(e);
     }
     // called when the client loses its connection
     function onConnectionLost(responseObject) {
-        if (responseObject.errorCode !== 0) {
-          //console.log("onConnectionLost:"+responseObject.errorMessage);
-        }
+      if (responseObject.errorCode !== 0) {
+        //console.log("onConnectionLost:"+responseObject.errorMessage);
+      }
     }
     // called when a message arrives
     function onMessageArrived(message) {
-        console.log("onMessageArrived:"+message.payloadString);
-        //document.getElementById("demo").innerHTML = message.payloadString;
+      console.log("onMessageArrived:"+message.payloadString);
+      localStorage.setItem("rcvmsg", message.payloadString);
+      //document.getElementById("demo").innerHTML = message.payloadString;
     }
   },
   mqttsending ( msg ) {
     console.log("messege = ",msg)
     cmdList =[];
     //const Paaho = require('./paho-mqtt')
-    const Paaho = require('./paho-mqtt-new')
+    //Paaho = require('./paho-mqtt-new')
     console.log("MQTTonConnect");
     var mQtt_ch = localStorage.getItem("mQtt_ch");
-    //client.subscribe("/gogomqtt");
-    //var d = new Date();
-    //var n = d.getMilliseconds();
-    //console.log(d,":",n);
+    client.subscribe("remotelab/"+mQtt_ch);
     for(var i=0;i<msg.length;i++){
-      var message = new Paaho.Paho.MQTT.Message(msg[i]);
+      var message = new Paho.MQTT.Message(msg[i]);
       message.destinationName = "remotelab/"+mQtt_ch;
       //console.log("loopmsg",msg[i]);
       client.send(message);
@@ -1030,7 +1026,7 @@ export default{
   mqttreceive ( msg ) {
     console.log("messege = ",msg)
     //const Paaho = require('./paho-mqtt')
-    const Paaho = require('./paho-mqtt-new')
+    Paaho = require('./paho-mqtt-new')
     console.log("MQTTonConnect for receive");
     var mQtt_ch = localStorage.getItem("mQtt_ch");
     //client.subscribe("/gogomqtt");
@@ -1288,9 +1284,11 @@ export default{
               var numSensor = sensorStackForIf.shift();
               var numCompare = imm1byte.pop();
               ss = localStorage.getItem("sensor_val"); // sensor value
-              valueSensor1 = ss;
-              //console.log("sensor[",numSensor,"]:",valueSensor1," > ",numCompare);
-              if (valueSensor1 > numCompare){
+              ss = ss.split(",")
+              console.log(numSensor)
+              valuesensor = ss;
+              //console.log("sensor[",numSensor,"]:",valuesensor," > ",numCompare);
+              if (valuesensor[numSensor-1] > numCompare){
                   boolCompare.push(true);
               }else {
                   boolCompare.push(false);
@@ -1300,9 +1298,10 @@ export default{
               var numSensor = sensorStackForIf.shift();
               var numCompare = imm1byte.shift();
               ss = localStorage.getItem("sensor_val"); // sensor value
-              valueSensor1 = ss;
-              //console.log("sensor[",numSensor,"]:",valueSensor1," < ",numCompare);
-              if (valueSensor1 < numCompare){
+              ss = ss.split(",")
+              valuesensor = ss;
+              //console.log("sensor[",numSensor,"]:",valuesensor," < ",numCompare);
+              if (valuesensor[numSensor-1] < numCompare){
                   boolCompare.push(true);
               }else {
                   boolCompare.push(false);
@@ -1351,7 +1350,11 @@ export default{
               //console.log("compare 61 : OP_GREATER_OR_EQUAL");
               var numSensor = sensorStackForIf.shift();
               var numCompare = imm1byte.shift();
-              if( valueSensor1 >= numCompare){
+              ss = localStorage.getItem("sensor_val"); // sensor value
+              ss = ss.split(",")
+              valuesensor = ss;
+              //console.log("sensor[",numSensor,"]:",valuesensor," < ",numCompare);
+              if (valuesensor[numSensor-1] >= numCompare){
                   boolCompare.push(true);
               }else {
                   boolCompare.push(false);
@@ -1362,7 +1365,11 @@ export default{
               //console.log("compare 62 : OP_LESS_OR_EQUAL");
               var numSensor = sensorStackForIf.shift();
               var numCompare = imm1byte.shift();
-              if( valueSensor1 <= numCompare){
+              ss = localStorage.getItem("sensor_val"); // sensor value
+              ss = ss.split(",")
+              valuesensor = ss;
+              //console.log("sensor[",numSensor,"]:",valuesensor," < ",numCompare);
+              if (valuesensor[numSensor-1] <= numCompare){
                   boolCompare.push(true);
               }else {
                   boolCompare.push(false);
@@ -1500,6 +1507,7 @@ export default{
               var headerServe = _imm;
               var cmdstr = "servo set header: " + _imm ;
               //this.sendCmd(cmdstr);
+              cmdList.push(cmdstr)
               break;
           case vm.SERVO_LT: // opcode 87
               var _imm = imm1byte.pop();
@@ -1508,6 +1516,7 @@ export default{
               var headerServe = _imm;
               var cmdstr = "servo set SERVO_LT: " + _imm ;
               //this.sendCmd(cmdstr);
+              cmdList.push(cmdstr)
               break;
           case vm.SERVO_RT: // opcode 87
               var _imm = imm1byte.pop();
@@ -1516,6 +1525,7 @@ export default{
               var headerServe = _imm;
               var cmdstr = "servo set SERVO_RT: " + _imm ;
               //this.sendCmd(cmdstr);
+              cmdList.push(cmdstr)
               break;
           case 90:
               var _imm = imm1byte.pop();

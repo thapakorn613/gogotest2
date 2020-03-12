@@ -1,6 +1,6 @@
 import { swalClasses, iconTypes } from '../classes'
 import { getContainer, getPopup, getContent } from './getters'
-import { removeClass, getChildByClass } from './domUtils'
+import { addClass, removeClass, getChildByClass } from './domUtils'
 import { isNodeEnv } from '../isNodeEnv'
 import { error } from '../utils'
 import sweetAlert from '../../sweetalert2'
@@ -46,7 +46,7 @@ const sweetHTML = `
        <span class="${swalClasses.label}"></span>
      </label>
      <textarea class="${swalClasses.textarea}"></textarea>
-     <div class="${swalClasses.validationerror}" id="${swalClasses.validationerror}"></div>
+     <div class="${swalClasses['validation-message']}" id="${swalClasses['validation-message']}"></div>
    </div>
    <div class="${swalClasses.actions}">
      <button type="button" class="${swalClasses.confirm}">OK</button>
@@ -75,6 +75,7 @@ export const init = (params) => {
     )
   }
 
+  /* istanbul ignore if */
   if (isNodeEnv()) {
     error('SweetAlert2 requires document to initialize')
     return
@@ -104,27 +105,32 @@ export const init = (params) => {
     popup.setAttribute('aria-modal', 'true')
   }
 
+  // RTL
+  if (window.getComputedStyle(targetElement).direction === 'rtl') {
+    addClass(getContainer(), swalClasses.rtl)
+  }
+
   let oldInputVal // IE11 workaround, see #1109 for details
-  const resetValidationError = (e) => {
+  const resetValidationMessage = (e) => {
     if (sweetAlert.isVisible() && oldInputVal !== e.target.value) {
-      sweetAlert.resetValidationError()
+      sweetAlert.resetValidationMessage()
     }
     oldInputVal = e.target.value
   }
 
-  input.oninput = resetValidationError
-  file.onchange = resetValidationError
-  select.onchange = resetValidationError
-  checkbox.onchange = resetValidationError
-  textarea.oninput = resetValidationError
+  input.oninput = resetValidationMessage
+  file.onchange = resetValidationMessage
+  select.onchange = resetValidationMessage
+  checkbox.onchange = resetValidationMessage
+  textarea.oninput = resetValidationMessage
 
   range.oninput = (e) => {
-    resetValidationError(e)
+    resetValidationMessage(e)
     rangeOutput.value = range.value
   }
 
   range.onchange = (e) => {
-    resetValidationError(e)
+    resetValidationMessage(e)
     range.nextSibling.value = range.value
   }
 

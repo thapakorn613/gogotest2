@@ -43,7 +43,7 @@ export const swalClasses = prefix([
   'label',
   'textarea',
   'inputerror',
-  'validationerror',
+  'validation-message',
   'progresssteps',
   'activeprogressstep',
   'progresscircle',
@@ -67,7 +67,8 @@ export const swalClasses = prefix([
   'bottom-right',
   'grow-row',
   'grow-column',
-  'grow-fullscreen'
+  'grow-fullscreen',
+  'rtl'
 ])
 
 export const iconTypes = prefix([

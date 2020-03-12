@@ -47,7 +47,11 @@ var hslToRgb = function(hue, saturation, lightness){
   green += lightnessAdjustment;
   blue += lightnessAdjustment;
 
-  return [Math.round(red * 255), Math.round(green * 255), Math.round(blue * 255)];
+  return [
+      Math.abs(Math.round(red * 255)),
+      Math.abs(Math.round(green * 255)),
+      Math.abs(Math.round(blue * 255))
+  ];
 
 };
 

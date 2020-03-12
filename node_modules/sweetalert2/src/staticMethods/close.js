@@ -1,5 +1,6 @@
 import { undoScrollbar } from '../utils/scrollbarFix'
 import { undoIOSfix } from '../utils/iosFix'
+import { undoIEfix } from '../utils/ieFix'
 import { unsetAriaHidden } from '../utils/aria'
 import * as dom from '../utils/dom/index'
 import { swalClasses } from '../utils/classes.js'
@@ -24,9 +25,11 @@ const close = (onClose, onAfterClose) => {
 
   const removePopupAndResetState = () => {
     if (!dom.isToast()) {
-      restoreActiveElement()
+      restoreActiveElement().then(() => triggerOnAfterClose(onAfterClose))
       globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, { capture: globalState.keydownListenerCapture })
       globalState.keydownHandlerAdded = false
+    } else {
+      triggerOnAfterClose(onAfterClose)
     }
 
     if (container.parentNode) {
@@ -46,13 +49,8 @@ const close = (onClose, onAfterClose) => {
     if (dom.isModal()) {
       undoScrollbar()
       undoIOSfix()
+      undoIEfix()
       unsetAriaHidden()
-    }
-
-    if (onAfterClose !== null && typeof onAfterClose === 'function') {
-      setTimeout(() => {
-        onAfterClose()
-      })
     }
   }
 
@@ -69,6 +67,15 @@ const close = (onClose, onAfterClose) => {
     removePopupAndResetState()
   }
 }
+
+const triggerOnAfterClose = (onAfterClose) => {
+  if (onAfterClose !== null && typeof onAfterClose === 'function') {
+    setTimeout(() => {
+      onAfterClose()
+    })
+  }
+}
+
 export {
   close,
   close as closePopup,

@@ -14,7 +14,7 @@ export const focusInput = (input) => {
 
   // place cursor at end of text in text input
   if (input.type !== 'file') {
-    // http://stackoverflow.com/a/2345915/1331425
+    // http://stackoverflow.com/a/2345915
     const val = input.value
     input.value = ''
     input.value = val
@@ -65,14 +65,11 @@ export const hide = (elem) => {
   elem.style.display = 'none'
 }
 
-
 // borrowed from jquery $(elem).is(':visible') implementation
 export const isVisible = (elem) => elem && (elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length)
 
-export const removeStyleProperty = (elem, property) => {
-  if (elem.style.removeProperty) {
-    elem.style.removeProperty(property)
-  } else {
-    elem.style.removeAttribute(property)
+export const contains = (haystack, needle) => {
+  if (typeof haystack.contains === 'function') {
+    return haystack.contains(needle)
   }
 }

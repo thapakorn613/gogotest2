@@ -51,11 +51,11 @@ import { mapGetters } from 'vuex'
 import notification from 'services/notification'
 
 const releaseUrl =
-  'https://api.github.com/repos/lilcmu/gogo-plugin/releases/latest'
+  'https://api.github.com/repos/gogoremote/remotelab-plugin/releases/latest'
 const macUrl =
   'https://github.com/LILCMU/gogo-plugin/releases/download/v0.9.4/gogo-plugin-0.9.4.dmg'
 const winUrl =
-  'https://github.com/LILCMU/gogo-plugin/releases/download/v0.9.4/gogo-plugin-0.9.4.msi'
+  'https://github.com/gogoremote/remotelab-plugin/releases/download/1.0.0/GoGo.Plugin-Remote.Lab.msi'
 
 export default {
   name: 'header-connection',
