@@ -1505,7 +1505,8 @@ export default{
               // GET  STATUS SENSOR
               // fix direction of motor
               var headerServe = _imm;
-              var cmdstr = "servo set header: " + _imm ;
+              //var cmdstr = "servo set header: " + _imm ;
+              var cmdstr = "setServoDuty" + _imm ;
               //this.sendCmd(cmdstr);
               cmdList.push(cmdstr)
               break;
@@ -1516,7 +1517,7 @@ export default{
               var headerServe = _imm;
               var cmdstr = "servo set SERVO_LT: " + _imm ;
               //this.sendCmd(cmdstr);
-              cmdList.push(cmdstr)
+              //cmdList.push(cmdstr)
               break;
           case vm.SERVO_RT: // opcode 87
               var _imm = imm1byte.pop();
@@ -1525,7 +1526,7 @@ export default{
               var headerServe = _imm;
               var cmdstr = "servo set SERVO_RT: " + _imm ;
               //this.sendCmd(cmdstr);
-              cmdList.push(cmdstr)
+              //cmdList.push(cmdstr)
               break;
           case 90:
               var _imm = imm1byte.pop();
