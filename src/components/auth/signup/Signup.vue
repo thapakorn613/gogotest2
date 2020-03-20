@@ -1,7 +1,7 @@
 <template>
   <div class="signup">
     <center class="row justify-content-center d-none d-lg-block">
-      <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/favicon_256.png" width="120" height="120"/></router-link>
+      <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/Logo-Remote-Lab.png" width="120" height="120"/></router-link>
     </center>
     <h2>{{'auth.createNewAccount' | translate}}</h2>
     <form @submit.prevent="onSignup">

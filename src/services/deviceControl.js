@@ -4,6 +4,7 @@ import { CONST, CONFIG } from './const'
 import notification from './notification'
 import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 import PahoMQTT from 'paho-mqtt'
+import LabDisplayPanel from '../components/gogoboard/gogo-elements/dashboard-elements/LabDisplayPanel.vue'
 
 
 // import Noty from 'noty'
@@ -43,8 +44,7 @@ var client ;
 var loop;
 var gblReporter;
 var boolGblLoop;
-var totalSeconds = 0;
-var old_cmd = "cmd";
+var mQttmessege = 'nothing';
 
 var countVMpro = 0;
 
@@ -989,7 +989,7 @@ export default{
       message.destinationName = "remotelab/"+mQtt_ch;
       console.log(mQtt_ch);
       client.send(message);
-      client.subscribe("remotelab/"+mQtt_ch);
+      client.subscribe("remotelab/labstatus");
     }
     function doFail(e){
       console.log(e);
@@ -1004,6 +1004,9 @@ export default{
     function onMessageArrived(message) {
       console.log("onMessageArrived:"+message.payloadString);
       localStorage.setItem("rcvmsg", message.payloadString);
+      if (message.payloadString != 'nothing') {
+        mQttmessege = message.payloadString;
+      }
       //document.getElementById("demo").innerHTML = message.payloadString;
     }
   },
@@ -1014,7 +1017,7 @@ export default{
     //Paaho = require('./paho-mqtt-new')
     console.log("MQTTonConnect");
     var mQtt_ch = localStorage.getItem("mQtt_ch");
-    client.subscribe("remotelab/"+mQtt_ch);
+    //client.subscribe("remotelab/lablstatus");
     for(var i=0;i<msg.length;i++){
       var message = new Paho.MQTT.Message(msg[i]);
       message.destinationName = "remotelab/"+mQtt_ch;
@@ -1023,17 +1026,9 @@ export default{
     }
     //client.send(message);
   },
-  mqttreceive ( msg ) {
-    console.log("messege = ",msg)
-    //const Paaho = require('./paho-mqtt')
-    Paaho = require('./paho-mqtt-new')
-    console.log("MQTTonConnect for receive");
-    var mQtt_ch = localStorage.getItem("mQtt_ch");
-    //client.subscribe("/gogomqtt");
-    //var d = new Date();
-    //var n = d.getMilliseconds();
-    //console.log(d,":",n);
-    //client.send(message);
+  mqttreceive () {
+    //console.log("getrcv :"+mQttmessege)
+    return mQttmessege
   },
 
   virtualgogo ( vByteCode ) {

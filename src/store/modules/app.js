@@ -37,6 +37,7 @@ const state = {
   gogo: deviceProcess.getDefault(),
   rpi: deviceProcess.getDefaultRpi(),
   keyValue: deviceProcess.getdefaultKeyValue(),
+  status: '',
   socket: {
     isConnected: false,
     message: '',
@@ -106,6 +107,9 @@ const mutations = {
     //   state.gogo.sensors = defaultVal.gogo.sensors
     // }
     var processedData = deviceProcess.processHID(message.stream)
+    var processedStatus = deviceControl.mqttreceive()
+    state.status = processedStatus
+    // console.log(processedData.data.motors)
 
     if (processedData.type === PACKAGETYPE.GOGOBOARD) {
       state.gogo = processedData.data

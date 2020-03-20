@@ -25,7 +25,7 @@
       <div class="lab-area">
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
-          v-bind:class="[true ? 'lab-active' : 'lab-inactive']"
+          v-bind:class="[labActive_1 ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(1)" @click="isSelect = 1" >
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon lab-icon-1 icon-lab-1 fa-stack-1x "></i>
@@ -49,7 +49,7 @@
       <div class="lab-area">
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
-          v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
+          v-bind:class="[labActive_2 ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(2)" @click="isSelect = 2">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon lab-icon-1 icon-lab-2 fa-stack-1x "></i>
@@ -69,7 +69,7 @@
       <div class="lab-area">
         <a id="gogo-lab-icon-a" class="gogo-monitor-lab fa-stack fa-2x" href="javascript:;"
           v-tooltip.top="$t('gogoboard.motor.'+(motors[0].isActive ? 'click_to_unselect' : 'click_to_select')) + ' A'"
-          v-bind:class="[false ? 'lab-active' : 'lab-inactive']"
+          v-bind:class="[labActive_3 ? 'lab-active' : 'lab-inactive']"
           v-on:click="selectLab(3)">
           <i class="lab-bg fa fa-circle fa-stack-2x"></i>
           <i class="lab-icon lab-icon-1 icon-lab-3 fa-stack-1x "></i>
@@ -113,6 +113,7 @@ import LabDetailPanel from './LabDetailPanel.vue'
 
 export default {
   name: 'lab-display-panel',
+  props: ['parentData'],
   components: {
     LabDetailPanel
   },
@@ -120,7 +121,11 @@ export default {
     return {
       childMessage: '',
       labIndex: '',
-      isSelect: ''
+      isSelect: '',
+      labActive: '',
+      labActive_1: false,
+      labActive_2: false,
+      labActive_3: false,
     }
   },
   methods: {
@@ -144,6 +149,39 @@ export default {
     ...mapMutations([
       'doGogoCmdObj', // map `this.doGogoCmd()` to `this.$store.commit('doGogoCmd')`
     ]),
+  },
+  watch: {
+    /*labActive: function (val) {
+      console.log(val+":"+this.isLab)
+    },*/
+    parentData: function (val) {
+      switch (val) {
+        case "lab-1-active":
+          this.labActive_1 = true;
+          //console.log('1:'+this.labActive_1)
+          break;
+        case "lab-1-inactive":
+          this.labActive_1 = false;
+          //console.log('1:'+this.labActive_1)
+          break;
+        case 'lab-2-active':
+          this.labActive_2 = true;
+          //console.log('2:'+this.labActive_2)
+          break;
+        case 'lab-2-inactive':
+          this.labActive_2 = false;
+          //console.log('2:'+this.labActive_2)
+          break;
+        case 'lab-3-active':
+          this.labActive_3 = true;
+          //console.log('3:'+this.labActive_3)
+          break;
+        case 'lab-3-inactive':
+          this.labActive_3 = false;
+          //console.log('3:'+this.labActive_3)
+          break;
+      }
+    }
   },
   mounted () {
   },

@@ -18,7 +18,7 @@
         :icon="'fa-question'"
         :headerBgColor="'#607d8d'" :headerTextColor="'#fbfff3'"
         :headerText="$t('gogoboard.headers.ping')">
-        <ping-panel :irValue="gogo.irValue"></ping-panel>
+        <ping-panel :irValue="labStatus"></ping-panel>
     </vuestic-widget>
 
     <vuestic-widget class="chat-widget sensor-widget" 
@@ -70,6 +70,7 @@ export default {
   },
   computed: {
     ...mapGetters(['gogo']),
+    ...mapGetters(['labStatus'])
   }
 }
 </script>

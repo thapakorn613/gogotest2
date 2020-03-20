@@ -39,19 +39,19 @@
         <i class="fa fa-circle"
           v-bind:class="[ gogoInfo.boardType > 0 ? 'icon-connect' : 'icon-disconnect' ]"></i>
       </router-link>
-      |
+      <!--|
       <router-link
         class="custom-link "
         :to="{ name: 'raspberry' }"
         target="_self">
         <slot name="title">
-          <!-- <i class="fa fa-desktop "></i> -->
+
           <pi-icon :size="18" />
           <span>{{ $t('navbar.raspberrypi') }}</span>
         </slot>
         <i class="fa fa-circle"
           v-bind:class="[ rpiStatus > 0 ? 'icon-connect' : 'icon-disconnect' ]"></i>
-      </router-link>
+      </router-link>-->
       |
       <router-link
         class="custom-link "

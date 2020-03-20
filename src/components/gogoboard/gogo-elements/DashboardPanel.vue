@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-panel">
     
-    <lab-display-panel v-on:childToParent="onChildClick"></lab-display-panel>
+    <lab-display-panel :parentData="labStatus" v-on:childToParent="onChildClick"></lab-display-panel>
     <!--<LabDisplayPanel :parentData="myData" v-on:childToParent="onChildClick"></LabDisplayPanel>-->
     <vue-tabs>
       <v-tab :title="$t('gogoboard.tabs.lab_detail')">
@@ -82,6 +82,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters(['labStatus']),
     // ...mapGetters(['gogoControls'])
   }
 }
