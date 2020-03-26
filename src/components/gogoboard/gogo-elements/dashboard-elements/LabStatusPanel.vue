@@ -53,8 +53,8 @@ import { setInterval } from 'timers'
 export default {
   name: 'lab-detail-panel',
   props: { 
-    parentData: Number,
-    parentData2: String,
+    parentData: String||Number,
+    parentData2: String
   },
   components: {
     vueSlider,

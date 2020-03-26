@@ -9,7 +9,7 @@
           </div>
       </div> -->
       <div class="row justify-content-center d-lg-none">
-        <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/favicon_256.png" width="120" height="120"/></router-link>
+        <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/Logo-Remote-Lab.png" width="120" height="120"/></router-link>
       </div>
       <div class="row">
 

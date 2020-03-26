@@ -80,6 +80,7 @@ function onMessageArrived(message) {
  * @namespace Paho.MQTT
  */
 /* jshint shadow:true */
+
 (function ExportLibrary(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object'){
 		module.exports = factory();
@@ -1214,7 +1215,9 @@ var PahoMQTT = (function (global) {
 	 */
 	ClientImpl.prototype._on_socket_message = function (event) {
 		this._trace("Client._on_socket_message", event.data);
+		this.receivePinger.reset();
 		var messages = this._deframeMessages(event.data);
+		console.log(event.data);
 		for (var i = 0; i < messages.length; i+=1) {
 		    this._handleMessage(messages[i]);
 		}
@@ -1222,34 +1225,41 @@ var PahoMQTT = (function (global) {
 
 	ClientImpl.prototype._deframeMessages = function(data) {
 		var byteArray = new Uint8Array(data);
-		var messages = [];
+		//var messages = [];
 	    if (this.receiveBuffer) {
 	        var newData = new Uint8Array(this.receiveBuffer.length+byteArray.length);
 	        newData.set(this.receiveBuffer);
 	        newData.set(byteArray,this.receiveBuffer.length);
 	        byteArray = newData;
-	        delete this.receiveBuffer;
+			delete this.receiveBuffer;
 	    }
 		try {
-		    var offset = 0;
+			console.log('Hi1');
+			var offset = 0;
+			var messages = [];
 		    while(offset < byteArray.length) {
+				console.log('Hi2');
 		        var result = decodeMessage(byteArray,offset);
 		        var wireMessage = result[0];
-		        offset = result[1];
+				offset = result[1];
 		        if (wireMessage !== null) {
 		            messages.push(wireMessage);
 		        } else {
 		            break;
-		        }
+				}
 		    }
 		    if (offset < byteArray.length) {
+				console.log('Hi3');
 		    	this.receiveBuffer = byteArray.subarray(offset);
 		    }
 		} catch (error) {
+			console.log('Hi4');
+			console.log(error)
 			var errorStack = ((error.hasOwnProperty('stack') == 'undefined') ? error.stack.toString() : "No Error Stack Available");
 			this._disconnected(ERROR.INTERNAL_ERROR.code , format(ERROR.INTERNAL_ERROR, [error.message,errorStack]));
 			return;
 		}
+		console.log(messages);
 		return messages;
 	};
 

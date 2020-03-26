@@ -2,7 +2,7 @@
   <div class="login">
     <!-- <span @dismissed="onDismissed"> {{ (error? error.message : '') }}</span> -->
     <center class="row justify-content-center d-none d-lg-block">
-      <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/favicon_256.png" width="120" height="120"/></router-link>
+      <router-link class='link' :to="{name: 'gogoboard'}"><img src="static/Logo-Remote-Lab.png" width="120" height="120"/></router-link>
     </center>
     <h2>{{'auth.welcome' | translate}}</h2>
     <form @submit.prevent="onSignin">

@@ -97,7 +97,7 @@ export default {
       if (sensors[i] >= 1020) {
         sensors[i] = 1024
       }
-      sensor_val = sensors[0]
+      sensor_val = sensors
       //console.log(sensor_val)
       localStorage.setItem("sensor_val", sensor_val);
     }
