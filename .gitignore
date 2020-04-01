@@ -4,3 +4,6 @@ npm-debug.log
 package-lock.json
 /yarn-error.log
 .idea/
+
+# dependencies
+node_modules/
